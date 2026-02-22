@@ -305,7 +305,6 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/asteroids/proprietary/vendor/etc/init/loc-launcher.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/loc-launcher.rc \
     vendor/nothing/asteroids/proprietary/vendor/etc/init/nicmd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/nicmd.rc \
     vendor/nothing/asteroids/proprietary/vendor/etc/init/port-bridge.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/port-bridge.rc \
-    vendor/nothing/asteroids/proprietary/vendor/etc/init/poweropt-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/poweropt-service.rc \
     vendor/nothing/asteroids/proprietary/vendor/etc/init/qcrilNrd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qcrilNrd.rc \
     vendor/nothing/asteroids/proprietary/vendor/etc/init/qdcmss.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qdcmss.rc \
     vendor/nothing/asteroids/proprietary/vendor/etc/init/qmipriod.debug.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qmipriod.debug.rc \
@@ -325,16 +324,12 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/asteroids/proprietary/vendor/etc/init/vendor.qti.hardware.alarm-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.alarm-service.rc \
     vendor/nothing/asteroids/proprietary/vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc \
     vendor/nothing/asteroids/proprietary/vendor/etc/init/vendor.qti.hardware.display.color-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.display.color-service.rc \
-    vendor/nothing/asteroids/proprietary/vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.iop@2.0-service.rc \
     vendor/nothing/asteroids/proprietary/vendor/etc/init/vendor.qti.hardware.limits-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.limits-service.rc \
-    vendor/nothing/asteroids/proprietary/vendor/etc/init/vendor.qti.hardware.perf2-hal-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.perf2-hal-service.rc \
     vendor/nothing/asteroids/proprietary/vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc \
-    vendor/nothing/asteroids/proprietary/vendor/etc/init/vendor.qti.hardware.servicetrackeraidl-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.servicetrackeraidl-service.rc \
     vendor/nothing/asteroids/proprietary/vendor/etc/init/vendor.qti.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.media.c2@1.0-service.rc \
     vendor/nothing/asteroids/proprietary/vendor/etc/init/vendor.qti.media.c2audio@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.media.c2audio@1.0-service.rc \
     vendor/nothing/asteroids/proprietary/vendor/etc/init/vendor.qti.pasrknob@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.pasrknob@1.0-service.rc \
     vendor/nothing/asteroids/proprietary/vendor/etc/init/vendor.qti.psiclient@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.psiclient@1.0-service.rc \
-    vendor/nothing/asteroids/proprietary/vendor/etc/init/vendor.qti.qspmhal-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.qspmhal-service.rc \
     vendor/nothing/asteroids/proprietary/vendor/etc/init/vendor.qti.rmt_storage.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.rmt_storage.rc \
     vendor/nothing/asteroids/proprietary/vendor/etc/init/vendor.qti.smp2p.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.smp2p.rc \
     vendor/nothing/asteroids/proprietary/vendor/etc/init/vendor.qti.tftp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.tftp.rc \
@@ -535,7 +530,6 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/asteroids/proprietary/vendor/etc/seccomp_policy/qcrilnr@2.0.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qcrilnr@2.0.policy \
     vendor/nothing/asteroids/proprietary/vendor/etc/seccomp_policy/qesdksec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qesdksec.policy \
     vendor/nothing/asteroids/proprietary/vendor/etc/seccomp_policy/qms.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qms.policy \
-    vendor/nothing/asteroids/proprietary/vendor/etc/seccomp_policy/qspm.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qspm.policy \
     vendor/nothing/asteroids/proprietary/vendor/etc/seccomp_policy/qti-systemd.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qti-systemd.policy \
     vendor/nothing/asteroids/proprietary/vendor/etc/seccomp_policy/qwesd@2.0.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qwesd@2.0.policy \
     vendor/nothing/asteroids/proprietary/vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/vendor.qti.hardware.dsp.policy \
@@ -932,7 +926,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.capabilityconfigstore@1.0-impl \
     vendor.qti.hardware.fm@1.0-impl \
     vendor.qti.hardware.qseecom@1.0-impl \
-    vendor.qti.hardware.servicetrackeraidl-impl \
     vendor.qti.hardware.wifidisplaysession@1.0-impl \
     vulkan.adreno \
     lib-imscommon \
@@ -977,7 +970,6 @@ PRODUCT_PACKAGES += \
     lib_bt_bundle \
     lib_lvacfs \
     libaacvibrator \
-    libadaptlaunch \
     libadm \
     libadreno_app_profiles \
     libadreno_compiler_cl \
@@ -991,8 +983,6 @@ PRODUCT_PACKAGES += \
     libagmclient \
     libaidenoiser \
     libaidenoiserv2 \
-    libapengine \
-    libappclassifier \
     libar-acdb \
     libar-gpr \
     libar-gsl \
@@ -1094,7 +1084,6 @@ PRODUCT_PACKAGES += \
     libfeutils \
     libfmpal \
     libgame_enhance \
-    libgamepoweroptfeature \
     libgeofencing \
     libgf_hal \
     libgnss \
@@ -1132,14 +1121,10 @@ PRODUCT_PACKAGES += \
     libkeymasterdeviceutils \
     libkeymasterutils \
     liblbs_core \
-    liblearningmodule \
-    liblightninglaunches \
     liblistensoundmodel2vendor \
     libllvm-glnext \
     libllvm-qcom \
     libllvm-qgl \
-    liblmthermallistner \
-    liblmutils-ns \
     libloadalgo_stub \
     libloc_api_v02 \
     libloc_api_wds \
@@ -1169,10 +1154,7 @@ PRODUCT_PACKAGES += \
     libmctfengine_stub \
     libmdmdetect \
     libmdsprpc \
-    libmemperfd \
     libmemutils \
-    libmeters-ns \
-    libmeters \
     libmfGhostDetection \
     libmfec \
     libminkdescriptor \
@@ -1214,7 +1196,6 @@ PRODUCT_PACKAGES += \
     libntcamyuv \
     libntf_vendor \
     libntofflinepostproc \
-    liboffscreenpoweroptfeature \
     libopencv \
     libopencv3a \
     libopestriping \
@@ -1225,18 +1206,9 @@ PRODUCT_PACKAGES += \
     libpasrutils \
     libpdmapper \
     libpdnotifier \
-    libperfconfig \
-    libperfgluelayer \
-    libperfioctl \
     libperipheral_client \
     libpfr \
     libportrait_repair_qnn \
-    libpowercore \
-    libprefapps \
-    libprekill \
-    libprocomp \
-    libq-perflog \
-    libqapesdk \
     libqc2audio_base \
     libqc2audio_basecodec \
     libqc2audio_core \
@@ -1305,13 +1277,6 @@ PRODUCT_PACKAGES += \
     libqsh_ble_pb \
     libqshcamera \
     libqsocket \
-    libqspm-mem-utils-vendor \
-    libqti-iopd-client \
-    libqti-iopd \
-    libqti-perfd-client \
-    libqti-perfd \
-    libqti-qesdk-secure \
-    libqti-util \
     libqtigefar \
     libqtiidentitycredential \
     libqtikeymint \
@@ -1338,8 +1303,6 @@ PRODUCT_PACKAGES += \
     libsfeShiftExtrapolation \
     libshsc \
     libsi \
-    libsilkyscrolls \
-    libskewknob \
     libsmemlog \
     libsnapdragoncolor-manager \
     libsnapdragoncolor-qdcm \
@@ -1380,7 +1343,6 @@ PRODUCT_PACKAGES += \
     libvega_common \
     libvendor.goodix.hardware.biometrics.fingerprint \
     libvideoml \
-    libvideooptfeature \
     libvideotxr \
     libvideoutils \
     libvidhance \
@@ -1495,15 +1457,11 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.dsp@1.0 \
     vendor.qti.hardware.embmsslaidl-V1-ndk \
     vendor.qti.hardware.fm@1.0 \
-    vendor.qti.hardware.iop@1.0 \
-    vendor.qti.hardware.iop@2.0 \
-    vendor.qti.hardware.limits@1.0 \
-    vendor.qti.hardware.limits@1.1 \
+    vendor.qti.hardware.limits@1.0_vendor \
+    vendor.qti.hardware.limits@1.1_vendor \
     vendor.qti.hardware.limits@1.2 \
     vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk \
     vendor.qti.hardware.pal@1.0-impl \
-    vendor.qti.hardware.perf2-V1-ndk \
-    vendor.qti.hardware.power.powermodule-V1-ndk \
     vendor.qti.hardware.qccsyshal@1.0_vendor \
     vendor.qti.hardware.qccsyshal@1.1_vendor \
     vendor.qti.hardware.qccsyshal@1.2_vendor \
@@ -1539,7 +1497,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.imsrtpservice@3.0_vendor \
     vendor.qti.imsrtpservice@3.1_vendor \
     vendor.qti.latencyaidlservice-V1-ndk \
-    vendor.qti.memory.pasrmanager-V1-ndk \
     vendor.qti.memory.pasrmanager@1.0 \
     vendor.qti.memory.pasrmanager@1.1 \
     vendor.qti.qccvndhal_aidl-V1-ndk_vendor \
@@ -1548,8 +1505,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.qesdhal@1.1 \
     vendor.qti.qesdhal@1.2 \
     vendor.qti.qesdhal@1.3 \
-    vendor.qti.qspmhal-V1-ndk \
-    vendor.qti.qspmhal-impl \
     vendor.qti.voiceprint@1.0 \
     vendor_lib_rfsa_adsp_libQnnHtpV73_so \
     vendor_lib_rfsa_adsp_libQnnHtpV73Skel_so \
@@ -1721,8 +1676,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.data.iwlandata.xml \
     vendor.qti.hardware.embmssl.xml \
     vendor.qti.hardware.limits-service.xml \
-    vendor.qti.hardware.perf2.xml \
-    vendor.qti.hardware.power.powermodule.xml \
     vendor.qti.hardware.qseecom@1.0-service.xml \
     vendor.qti.hardware.radio.am.xml \
     vendor.qti.hardware.radio.ims.xml \
@@ -1731,11 +1684,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.radio.uim.xml \
     vendor.qti.hardware.radio.uim_remote_client.xml \
     vendor.qti.hardware.radio.uim_remote_server.xml \
-    vendor.qti.hardware.servicetrackeraidl-service.xml \
     vendor.qti.hardware.wifidisplaysession-service.xml \
     vendor.qti.ims.factoryaidlservice.xml \
     vendor.qti.qccvndhal_aidl-service.xml \
-    vendor.qti.qspmhal-service.xml \
     vendor.qti.qccsyshal_aidl-service.xml \
     ATFWD-daemon \
     adpl \
@@ -1769,11 +1720,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.alarm-service \
     vendor.qti.hardware.capabilityconfigstore@1.0-service \
     vendor.qti.hardware.display.color-service \
-    vendor.qti.hardware.iop@2.0-service \
     vendor.qti.hardware.limits@1.2-service \
-    vendor.qti.hardware.perf2-hal-service \
     vendor.qti.hardware.qseecom@1.0-service \
-    vendor.qti.hardware.servicetrackeraidl-service \
     vendor.qti.media.c2@1.0-service \
     vendor.qti.media.c2audio@1.0-service \
     vendor.qti.psiclient@1.0-service \
@@ -1810,7 +1758,6 @@ PRODUCT_PACKAGES += \
     pm-service \
     port-bridge \
     power_off_alarm \
-    poweropt-service \
     ppd \
     qcc-vendor \
     qdcmss \
@@ -1837,7 +1784,6 @@ PRODUCT_PACKAGES += \
     thermal-engine-v2 \
     time_daemon \
     vendor.dpmd \
-    vendor.qti.qspmhal-service \
     vendor_modprobe \
     wfdhdcphalservice \
     wfdvndservice \
