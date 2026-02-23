@@ -69,7 +69,6 @@ tgkill: 1
 rt_sigaction: 1
 rt_tgsigqueueinfo: 1
 #mprotect: arg2 in 0x1|0x2
-munmap: 1
 #mmap: arg2 in 0x1|0x2
 geteuid: 1
 getgid: 1
