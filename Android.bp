@@ -9578,123 +9578,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libar-acdb",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libar-acdb.so",
-            ],
-            shared_libs: [
-                "liblx-osal",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libar-gpr",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libar-gpr.so",
-            ],
-            shared_libs: [
-                "liblx-osal",
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libar-gsl",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libar-gsl.so",
-            ],
-            shared_libs: [
-                "liblx-osal",
-                "libar-acdb",
-                "liblx-ar_util",
-                "libar-gpr",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libar-pal",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libar-pal.so",
-            ],
-            shared_libs: [
-                "libar-gsl",
-                "liblog",
-                "libexpat",
-                "liblx-osal",
-                "libaudioroute",
-                "libcutils",
-                "libutilscallstack",
-                "libagmclient",
-                "libvui_intf",
-                "libarmemlog",
-                "libhidlbase",
-                "libtinyalsa",
-                "libtinycompress",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libarc.ion",
     owner: "nothing",
     strip: {
@@ -25811,6 +25694,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true,
     },
+    check_elf_files: false,
     target: {
         android_arm64: {
             srcs: [
@@ -25841,6 +25725,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true,
     },
+    check_elf_files: false,
     target: {
         android_arm64: {
             srcs: [
@@ -25877,6 +25762,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true,
     },
+    check_elf_files: false,
     target: {
         android_arm64: {
             srcs: [
@@ -25899,8 +25785,8 @@ cc_prebuilt_library_shared {
                 "libdng_sdk",
                 "libjpeg",
                 "libpiex",
+
                 "libpng",
-                "libheif",
                 "libnativewindow",
                 "libEGL",
                 "libGLESv2",
@@ -25922,6 +25808,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true,
     },
+    check_elf_files: false,
     target: {
         android_arm64: {
             srcs: [
@@ -25953,6 +25840,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true,
     },
+    check_elf_files: false,
     target: {
         android_arm64: {
             srcs: [
@@ -25985,6 +25873,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true,
     },
+    check_elf_files: false,
     target: {
         android_arm64: {
             srcs: [
@@ -26012,6 +25901,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true,
     },
+    check_elf_files: false,
     target: {
         android_arm64: {
             srcs: [
@@ -26059,6 +25949,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true,
     },
+    check_elf_files: false,
     target: {
         android_arm64: {
             srcs: [
@@ -26107,6 +25998,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true,
     },
+    check_elf_files: false,
     target: {
         android_arm64: {
             srcs: [
@@ -26148,6 +26040,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true,
     },
+    check_elf_files: false,
     target: {
         android_arm64: {
             srcs: [
@@ -26178,6 +26071,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true,
     },
+    check_elf_files: false,
     target: {
         android_arm64: {
             srcs: [
@@ -26217,7 +26111,6 @@ cc_prebuilt_library_shared {
     compile_multilib: "64",
     prefer: true,
     system_ext_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -26226,6 +26119,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true,
     },
+    check_elf_files: false,
     target: {
         android_arm64: {
             srcs: [
@@ -26266,6 +26160,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true,
     },
+    check_elf_files: false,
     target: {
         android_arm64: {
             srcs: [
@@ -26296,6 +26191,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true,
     },
+    check_elf_files: false,
     target: {
         android_arm64: {
             srcs: [
@@ -26325,6 +26221,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true,
     },
+    check_elf_files: false,
     target: {
         android_arm64: {
             srcs: [
@@ -26356,6 +26253,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true,
     },
+    check_elf_files: false,
     target: {
         android_arm64: {
             srcs: [
@@ -26387,6 +26285,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true,
     },
+    check_elf_files: false,
     target: {
         android_arm64: {
             srcs: [
