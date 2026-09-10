@@ -6,8 +6,10 @@ soong_namespace {
     imports: [
         "hardware/qcom-caf/sm8650",
         "hardware/qcom/wlan",
+        "hardware/qcom/wlan/qcwcn",
         "vendor/qcom/opensource/commonsys/display",
         "vendor/qcom/opensource/commonsys-intf/display",
+        "vendor/qcom/opensource/commonsys-intf/display/aidl/config",
         "vendor/qcom/opensource/dataservices",
     ],
 }
@@ -23441,7 +23443,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
-    prefer: true,
+    prefer: false,
     soc_specific: true,
 }
 
