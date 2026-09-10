@@ -6,6 +6,20 @@ LOCAL_PATH := $(call my-dir)
 
 ifeq ($(TARGET_DEVICE),asteroids)
 
+define add-radio-file-sha1-checked
+  $(eval $(call add-radio-file-sha1-checked-internal,$(1),$(notdir $(1)),$(2)))
+endef
+define add-radio-file-sha1-checked-internal
+INSTALLED_RADIOIMAGE_TARGET += $$(PRODUCT_OUT)/$(2)
+$$(PRODUCT_OUT)/$(2): $$(LOCAL_PATH)/$(1)
+	$$(hide) actual_sha1=$$$$(sha1sum $$< | cut -d ' ' -f 1); \
+		if [ "$$$$actual_sha1" != "$(3)" ]; then \
+			echo "SHA-1 mismatch for $$<: expected $(3), got $$$$actual_sha1"; \
+			exit 1; \
+		fi
+	$$(transform-prebuilt-to-target)
+endef
+
 $(call add-radio-file-sha1-checked,radio/abl.img,7dfcabfa760cee2887c4b68a86df043e9af0ae34)
 $(call add-radio-file-sha1-checked,radio/aop.img,69190b3a13488ba7fe863f162904fe21e7248d05)
 $(call add-radio-file-sha1-checked,radio/aop_config.img,4216a39b502bc466391f4e36c6193089ef19b63e)
