@@ -3236,6 +3236,8 @@ cc_prebuilt_library_shared {
                 "libsync",
                 "com.qti.stats.common",
                 "libntf_vendor",
+                "android.hardware.graphics.common@1.1",
+                "camera.qcom",
                 "libz",
                 "libc++",
                 "libc",
@@ -4429,10 +4431,9 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libutils",
                 "libntcamcommonutils",
-                "libcamera_metadata",
-                "libntcamyuv",
-                "librender_lib",
                 "libmorpho_RapidEffect",
+                "libcolorful",
+                "libntcamyuv",
                 "libc",
                 "libm",
                 "libdl",
@@ -6448,6 +6449,7 @@ cc_prebuilt_library_shared {
                 "libc++",
                 "libcutils",
                 "liblog",
+                "libjsoncpp",
                 "libcamxcommonutils",
                 "libz",
                 "libc",
@@ -7403,50 +7405,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.graphics.mapper@4.0-impl-qti-display",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-qti-display.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libutils",
-                "libhidlbase",
-                "libgrallocutils",
-                "libgralloccore",
-                "libgralloctypes",
-                "libsync",
-                "vendor.qti.hardware.display.mapper@3.0",
-                "vendor.qti.hardware.display.mapper@4.0",
-                "vendor.qti.hardware.display.mapperextensions@1.0",
-                "android.hardware.graphics.mapper@2.0",
-                "android.hardware.graphics.mapper@2.1",
-                "vendor.qti.hardware.display.mapperextensions@1.1",
-                "android.hardware.graphics.mapper@3.0",
-                "android.hardware.graphics.mapper@4.0",
-                "libdmabufheap",
-                "vendor.qti.hardware.display.mapperextensions@1.2",
-                "vendor.qti.hardware.display.mapperextensions@1.3",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "hw",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "audio.bluetooth_qti.default",
     owner: "nothing",
     strip: {
@@ -7635,6 +7593,7 @@ cc_prebuilt_library_shared {
                 "libsnsapi",
                 "libsns_direct_channel_stub",
                 "libvega_common",
+                "libtinyxml2",
                 "libcom.qti.chinodeutils",
                 "libfastcvopt",
                 "libsynx",
@@ -8146,6 +8105,38 @@ cc_prebuilt_library_shared {
                 "vendor.qti.hardware.qseecom-V1-ndk",
                 "libbinder_ndk",
                 "libQSEEComAPI",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    relative_install_path: "hw",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.servicetrackeraidl-impl",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/hw/vendor.qti.hardware.servicetrackeraidl-impl.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libhardware",
+                "libbase",
+                "liblog",
+                "libcutils",
+                "libutils",
+                "vendor.qti.hardware.servicetrackeraidl-V1-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -8901,6 +8892,65 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libGPMTEEC_vendor",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libGPMTEEC_vendor.so",
+            ],
+            shared_libs: [
+                "libc",
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libGPTEE_vendor",
+                "libminkdescriptor",
+                "libminksocket_vendor",
+                "libdmabufheap",
+                "libc++",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libGPTEE_vendor",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libGPTEE_vendor.so",
+            ],
+            shared_libs: [
+                "libc",
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libbase",
+                "libc++",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libGPreqcancel",
     owner: "nothing",
     strip: {
@@ -9374,6 +9424,33 @@ cc_prebuilt_library_shared {
                 "libc++",
                 "libdl",
                 "libm",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libaacvibrator",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libaacvibrator.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
             ],
         },
     },
@@ -11008,6 +11085,7 @@ cc_prebuilt_library_shared {
                 "libc++",
                 "libcutils",
                 "liblog",
+                "libjsoncpp",
                 "libsync",
                 "libutils",
                 "libutilscallstack",
@@ -11884,6 +11962,31 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libcneqmiutils",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libcneqmiutils.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libcolor-default",
     owner: "nothing",
     strip: {
@@ -11906,6 +12009,33 @@ cc_prebuilt_library_shared {
                 "libc",
                 "libm",
                 "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcolorful",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libcolorful.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libEGL",
+                "libGLESv3",
+                "libz",
+                "libm",
+                "libdl",
+                "libc",
             ],
         },
     },
@@ -12007,6 +12137,33 @@ cc_prebuilt_library_shared {
                 "libdiag",
                 "libdsutils",
                 "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcpion",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libcpion.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libdmabufheap",
+                "libvmmem",
                 "libc++",
                 "libc",
                 "libm",
@@ -12159,61 +12316,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libdisplayconfig.qti",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libdisplayconfig.qti.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libhidlbase",
-                "libutils",
-                "vendor.display.config@2.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdisplaydebug",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libdisplaydebug.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libdisplayqos",
     owner: "nothing",
     strip: {
@@ -12288,6 +12390,32 @@ cc_prebuilt_library_shared {
                 "libhardware_legacy",
                 "libhardware",
                 "com.qualcomm.qti.dpm.api@1.0_vendor",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdpp_manager",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libdpp_manager.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
                 "libc++",
                 "libc",
                 "libm",
@@ -12384,35 +12512,6 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libQSEEComAPI",
                 "libtime_genoff",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdrmutils",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libdrmutils.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libutils",
-                "libdrm",
-                "libdisplaydebug",
                 "libc++",
                 "libc",
                 "libm",
@@ -12631,6 +12730,32 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libfastcrc",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libfastcrc.so",
+            ],
+            shared_libs: [
+                "libvideoutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libfastcvdsp_stub",
     owner: "nothing",
     strip: {
@@ -12700,35 +12825,6 @@ cc_prebuilt_library_shared {
                 "libdisplaydebug",
                 "libminksocket_vendor",
                 "libqcbor",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libfilefinder",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libfilefinder.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libutils",
-                "libdisplaydebug",
-                "vendor.qti.hardware.display.demura-V1-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -13015,7 +13111,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libgpu_tonemapper",
+    name: "libgpudataproducer",
     owner: "nothing",
     strip: {
         none: true,
@@ -13023,120 +13119,11 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/libgpu_tonemapper.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libEGL",
-                "libGLESv2",
-                "libGLESv3",
-                "libgrallocutils",
-                "libhidlbase",
-                "libui",
-                "libutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libgralloc.qti",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libgralloc.qti.so",
+                "proprietary/vendor/lib64/libgpudataproducer.so",
             ],
             shared_libs: [
                 "liblog",
-                "libcutils",
-                "libutils",
-                "libgralloctypes",
-                "libhidlbase",
-                "libhardware",
-                "android.hardware.graphics.mapper@4.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libgralloccore",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libgralloccore.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libutils",
-                "libgrallocutils",
-                "libgralloctypes",
-                "libgralloc.qti",
-                "libhidlbase",
-                "libion",
-                "libdmabufheap",
-                "libvmmem",
-                "android.hardware.graphics.mapper@2.1",
-                "android.hardware.graphics.mapper@3.0",
-                "android.hardware.graphics.mapper@4.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libgrallocutils",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libgrallocutils.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libutils",
-                "libgralloctypes",
-                "libhidlbase",
-                "android.hardware.graphics.common@1.2",
-                "android.hardware.graphics.mapper@2.0",
-                "android.hardware.graphics.mapper@2.1",
-                "android.hardware.graphics.mapper@3.0",
-                "android.hardware.graphics.mapper@4.0",
+                "libz",
                 "libc++",
                 "libc",
                 "libm",
@@ -13166,6 +13153,92 @@ cc_prebuilt_library_shared {
                 "libz",
                 "libsync",
                 "libdmabufheap",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libhdcp1prov",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libhdcp1prov.so",
+            ],
+            shared_libs: [
+                "libdiag",
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libQSEEComAPI",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libhdcp2p2prov",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libhdcp2p2prov.so",
+            ],
+            shared_libs: [
+                "libdiag",
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libQSEEComAPI",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libhdcpsrm",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libhdcpsrm.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libQSEEComAPI",
+                "libminkdescriptor",
+                "libtrustedapploader",
                 "libc++",
                 "libc",
                 "libm",
@@ -13381,35 +13454,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libhistogram",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libhistogram.so",
-            ],
-            shared_libs: [
-                "libdrm",
-                "liblog",
-                "libcutils",
-                "libutils",
-                "libbase",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libhme",
     owner: "nothing",
     strip: {
@@ -13495,6 +13539,33 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libics_haptic",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libics_haptic.so",
+            ],
+            shared_libs: [
+                "libbase",
+                "liblog",
+                "libcutils",
                 "libc++",
                 "libc",
                 "libm",
@@ -14885,6 +14956,38 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "liblqe",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/liblqe.so",
+            ],
+            shared_libs: [
+                "libdiag",
+                "libdsutils",
+                "libcutils",
+                "libqmiservices",
+                "libqmi_cci",
+                "libqmi_common_so",
+                "libqmi_client_helper",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "liblvacfs_wrapper",
     owner: "nothing",
     strip: {
@@ -14995,6 +15098,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -15366,6 +15470,33 @@ cc_prebuilt_library_shared {
                 "libsync",
                 "libbitmlenginev2",
                 "libz",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmm-hdcpmgr",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libmm-hdcpmgr.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libcutils",
                 "libc++",
                 "libc",
                 "libm",
@@ -15760,6 +15891,7 @@ cc_prebuilt_library_shared {
                 "libGLESv2",
                 "libEGL",
                 "libnativewindow",
+                "libz",
                 "libm",
             ],
         },
@@ -15890,10 +16022,10 @@ cc_prebuilt_library_shared {
                 "libdsutils",
                 "libconfigdb",
                 "libqmi_cci",
+                "libqmi_common_so",
                 "librmnetctl",
                 "libnicm_utils",
                 "libnicm_netlink",
-                "libnicm_modemproxy",
                 "libnicm_recovery",
                 "libc++",
                 "libc",
@@ -15929,6 +16061,7 @@ cc_prebuilt_library_shared {
                 "libnicm_netlink",
                 "libnicm_utils",
                 "libnicm_recovery",
+                "libnicm_internal",
                 "android.system.net.netd-V1-ndk",
                 "libcom.android.tethering.connectivity_native",
                 "libc++",
@@ -16325,6 +16458,7 @@ cc_prebuilt_library_shared {
                 "libcamera_metadata",
                 "libutils",
                 "libntcamcommonutils",
+                "libntcamextened",
                 "libntcammetadata",
                 "libc",
                 "libm",
@@ -17361,6 +17495,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -17540,6 +17675,36 @@ cc_prebuilt_library_shared {
                 "libhidlbase",
                 "libfmq",
                 "libcrypto",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libqcci_legacy",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libqcci_legacy.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libdiag",
+                "libidl",
+                "libqmi_client_qmux",
+                "libqmi_legacy",
+                "liblog",
                 "libc++",
                 "libc",
                 "libm",
@@ -18428,36 +18593,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libqdMetaData",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqdMetaData.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libutils",
-                "libhidlbase",
-                "libgralloc.qti",
-                "libgralloctypes",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libqdcm-algo",
     owner: "nothing",
     strip: {
@@ -18506,6 +18641,37 @@ cc_prebuilt_library_shared {
                 "libsdm-color",
                 "libbinder",
                 "libjsoncpp",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libqdcm-mode-parser",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libqdcm-mode-parser.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libutils",
+                "libdisplaydebug",
+                "libsdm-color",
+                "libbinder",
+                "libtinyxml2_1",
                 "libc++",
                 "libc",
                 "libm",
@@ -18571,39 +18737,6 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "liblog",
                 "libdiag",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqdutils",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqdutils.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libutils",
-                "libbinder",
-                "libqservice",
-                "libgralloctypes",
-                "android.hardware.graphics.common@1.2",
-                "android.hardware.graphics.mapper@4.0",
-                "libhidlbase",
                 "libc++",
                 "libc",
                 "libm",
@@ -18940,6 +19073,37 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libqmi_csvt_srvc",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libqmi_csvt_srvc.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libdiag",
+                "libqmi_legacy",
+                "libqmiservices",
+                "libqcci_legacy",
+                "libqmi_client_qmux",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libqmi_encdec",
     owner: "nothing",
     strip: {
@@ -18953,6 +19117,63 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libcutils",
                 "libutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libqmi_legacy",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libqmi_legacy.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libqmi_client_qmux",
+                "libdiag",
+                "libdsutils",
+                "libqmiservices",
+                "libidl",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libqmiextservices",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libqmiextservices.so",
+            ],
+            shared_libs: [
+                "libidl",
+                "libqmiservices",
                 "libc++",
                 "libc",
                 "libm",
@@ -19013,6 +19234,34 @@ cc_prebuilt_library_shared {
                 "libbase",
                 "libcrypto",
                 "libnl",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libqms_client",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libqms_client.so",
+            ],
+            shared_libs: [
+                "libbinder_shim",
+                "liblog",
+                "libbinder",
+                "libutils",
                 "libc++",
                 "libc",
                 "libm",
@@ -19122,34 +19371,6 @@ cc_prebuilt_library_shared {
                 "libsync",
                 "libbitmlenginev2",
                 "libz",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqservice",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqservice.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libutils",
-                "libbinder",
                 "libc++",
                 "libc",
                 "libm",
@@ -19514,6 +19735,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -19650,33 +19872,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "librender_lib",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/librender_lib.so",
-            ],
-            shared_libs: [
-                "libstmobile_effect",
-                "liblog",
-                "libEGL",
-                "libGLESv3",
-                "libm",
-                "libdl",
-                "libc",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libril-db",
     owner: "nothing",
     strip: {
@@ -19726,6 +19921,54 @@ cc_prebuilt_library_shared {
                 "qtiPeripheralMgr",
                 "libqcrilNrQtiMutex",
                 "qtiril-utils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libril-qc-ltedirectdisc",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libril-qc-ltedirectdisc.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libril-qc-radioconfig",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libril-qc-radioconfig.so",
+            ],
+            shared_libs: [
                 "libc++",
                 "libc",
                 "libm",
@@ -19928,36 +20171,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsdedrm",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libsdedrm.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libutils",
-                "libdrm",
-                "libdrmutils",
-                "libdisplaydebug",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libsdm-color",
     owner: "nothing",
     strip: {
@@ -20045,71 +20258,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsdmcore",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libsdmcore.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libutils",
-                "libdisplaydebug",
-                "libsdmutils",
-                "libdrm",
-                "libdrmutils",
-                "libsdedrm",
-                "libsdmdal",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libsdmdal",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libsdmdal.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libutils",
-                "libdisplaydebug",
-                "libsdmutils",
-                "libdrm",
-                "libdrmutils",
-                "libsdedrm",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libsdmextension",
     owner: "nothing",
     strip: {
@@ -20148,34 +20296,6 @@ cc_prebuilt_library_shared {
                 "android.hardware.thermal-V1-ndk",
                 "libbinder",
                 "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libsdmutils",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libsdmutils.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libutils",
-                "libdisplaydebug",
                 "libc++",
                 "libc",
                 "libm",
@@ -20329,6 +20449,36 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libsi",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libsi.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libpng",
+                "libQSEEComAPI",
+                "libtrustedapploader",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libsilkyscrolls",
     owner: "nothing",
     strip: {
@@ -20374,6 +20524,30 @@ cc_prebuilt_library_shared {
                 "libc",
                 "libcutils",
                 "libc++",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsmemlog",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libsmemlog.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libc",
                 "libm",
                 "libdl",
             ],
@@ -20702,7 +20876,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libstmobile_effect",
+    name: "libstreamparser",
     owner: "nothing",
     strip: {
         none: true,
@@ -20710,13 +20884,77 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/libstmobile_effect.so",
+                "proprietary/vendor/lib64/libstreamparser.so",
             ],
             shared_libs: [
-                "libdl",
-                "libm",
+                "libvideoutils",
                 "liblog",
+                "libcutils",
+                "qti.video.utils.videobufferlayout",
+                "libc++",
                 "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstreamprocessor",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libstreamprocessor.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libcodec2_vndk",
+                "libmediandk",
+                "qti.video.utils.videobufferlayout",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsubsystem_control",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libsubsystem_control.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libqmi_cci",
+                "libqmi_common_so",
+                "libmdmdetect",
+                "libperipheral_client",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
             ],
         },
     },
@@ -21238,6 +21476,34 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libtrustedapploader",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libtrustedapploader.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libminkdescriptor",
+                "libminksocket_vendor",
+                "libqcbor",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libubifocus",
     owner: "nothing",
     strip: {
@@ -21456,6 +21722,30 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libvideoutils",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libvideoutils.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libvidhance",
     owner: "nothing",
     strip: {
@@ -21613,6 +21903,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -23861,6 +24152,31 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.noth.hardware.charge-V1-ndk",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.noth.hardware.charge-V1-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.noth.hardware.sensor.sensor_extension-V1-ndk_platform",
     owner: "nothing",
     strip: {
@@ -24833,6 +25149,34 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.iop@1.0",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.iop@1.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.iop@2.0",
     owner: "nothing",
     strip: {
@@ -25154,6 +25498,34 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.qdutils_disp@1.0",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.qseecom-V1-ndk",
     owner: "nothing",
     strip: {
@@ -25167,6 +25539,34 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libbinder_ndk",
                 "android.hardware.common-V2-ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.qteeconnector@1.0",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
                 "libc++",
                 "libc",
                 "libm",
@@ -26357,6 +26757,15 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
+    name: "vendor_lib_rfsa_adsp_libhdr_skel_so",
+    filename: "libhdr_skel.so",
+    owner: "nothing",
+    src: "proprietary/vendor/lib/rfsa/adsp/libhdr_skel.so",
+    relative_install_path: "adsp",
+    soc_specific: true,
+}
+
+prebuilt_rfsa {
     name: "vendor_lib_rfsa_adsp_libhme_dsp_skel_so",
     filename: "libhme_dsp_skel.so",
     owner: "nothing",
@@ -26478,7 +26887,6 @@ cc_prebuilt_library_shared {
                 "lib-imsvideocodec",
                 "libmediandk",
                 "libnativewindow",
-                "libion",
                 "libdmabufheap",
                 "lib-imsvtutils",
                 "libandroid",
@@ -26551,6 +26959,34 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "liblog",
                 "libdiag_system",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libSurfaceUtil_jni",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libSurfaceUtil_jni.so",
+            ],
+            shared_libs: [
+                "libbinder",
+                "libgui",
+                "libnativehelper",
+                "libutils",
                 "libc++",
                 "libc",
                 "libm",
@@ -26760,34 +27196,6 @@ cc_prebuilt_library_shared {
                 "libnativehelper",
                 "liblog",
                 "libjpeg",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libimscamera_jni",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libimscamera_jni.so",
-            ],
-            shared_libs: [
-                "libnativehelper",
-                "libcutils",
-                "libutils",
-                "liblog",
                 "libc++",
                 "libc",
                 "libm",
@@ -27207,7 +27615,6 @@ cc_prebuilt_library_shared {
                 "libjpeg",
                 "libpiex",
                 "libpng",
-                "libheif",
                 "libnativewindow",
                 "libEGL",
                 "libGLESv2",
@@ -27273,7 +27680,7 @@ cc_prebuilt_library_shared {
                 "vendor.display.config@2.0",
                 "libdisplayconfig.system.qti",
                 "libbinder_ndk",
-                "vendor.qti.hardware.display.config-V5-ndk",
+                "vendor.qti.hardware.display.config-V16-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -27301,6 +27708,7 @@ cc_prebuilt_library_shared {
                 "libmmosal",
                 "liblog",
                 "libutils",
+                "libwfddisplayconfig",
                 "libc++",
                 "libc",
                 "libm",
@@ -27394,6 +27802,7 @@ cc_prebuilt_library_shared {
                 "android.hardware.graphics.allocator@4.0",
                 "android.hardware.graphics.allocator-V2-ndk",
                 "libbinder_ndk",
+                "libaudiobase",
                 "libc++",
                 "libc",
                 "libm",
@@ -27426,12 +27835,8 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "liblog",
                 "libwfdclient",
-                "libhidlbase",
-                "libhidlmemory",
                 "libbinder",
                 "libgui",
-                "android.hidl.base@1.0",
-                "android.hidl.token@1.0-utils",
                 "android.hardware.graphics.common@1.0",
                 "android.hardware.graphics.bufferqueue@1.0",
                 "android.hardware.graphics.bufferqueue@2.0",
@@ -27465,6 +27870,7 @@ cc_prebuilt_library_shared {
                 "libmmosal",
                 "libwfdcommonutils",
                 "libwfdconfigutils",
+                "libwfdmminterface",
                 "liblog",
                 "libc",
                 "libm",
@@ -27502,14 +27908,15 @@ cc_prebuilt_library_shared {
                 "libwfdmminterface",
                 "libmedia_helper",
                 "libaudioclient",
+                "libaudiobase",
                 "libaudiofoundation",
                 "audioclient-types-aidl-cpp",
-                "android.media.audio.common.types-V4-cpp",
+                "android.media.audio.common.types-V5-cpp",
                 "libwfdmmsrc_system",
                 "libwfdavenhancements",
                 "libhidlbase",
                 "vendor.qti.hardware.wifidisplaysession@1.0",
-                "vendor.qti.hardware.wifidisplaysession_aidl-V1-ndk",
+                "vendor.qti.hardware.wifidisplaysession_aidl-V2-ndk",
                 "libbinder_ndk",
                 "libc++",
                 "libc",
@@ -27917,7 +28324,7 @@ cc_prebuilt_library_shared {
                 "proprietary/system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2-halimpl.so",
             ],
             shared_libs: [
-                "libprotobuf-cpp-full-21.7",
+                "libprotobuf-cpp-full",
                 "libcutils",
                 "liblog",
                 "libhidlbase",
@@ -28027,7 +28434,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.wifidisplaysession_aidl-V1-ndk",
+    name: "vendor.qti.hardware.wifidisplaysession_aidl-V2-ndk",
     owner: "nothing",
     strip: {
         none: true,
@@ -28035,7 +28442,7 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.hardware.wifidisplaysession_aidl-V1-ndk.so",
+                "proprietary/system_ext/lib64/vendor.qti.hardware.wifidisplaysession_aidl-V2-ndk.so",
             ],
             shared_libs: [
                 "libbinder_ndk",
@@ -28336,6 +28743,54 @@ android_app_import {
 }
 
 android_app_import {
+    name: "MobileFeliCaClient",
+    owner: "nothing",
+    apk: "proprietary/product/app/MobileFeliCaClient/MobileFeliCaClient.apk",
+    preprocessed: true,
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    product_specific: true,
+}
+
+android_app_import {
+    name: "MobileFeliCaMenuMainApp",
+    owner: "nothing",
+    apk: "proprietary/product/app/MobileFeliCaMenuMainApp/MobileFeliCaMenuMainApp.apk",
+    preprocessed: true,
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    product_specific: true,
+}
+
+android_app_import {
+    name: "MobileFeliCaSettingApp",
+    owner: "nothing",
+    apk: "proprietary/product/app/MobileFeliCaSettingApp/MobileFeliCaSettingApp.apk",
+    preprocessed: true,
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    product_specific: true,
+}
+
+android_app_import {
+    name: "MobileFeliCaWebPluginBoot",
+    owner: "nothing",
+    apk: "proprietary/product/app/MobileFeliCaWebPluginBoot/MobileFeliCaWebPluginBoot.apk",
+    preprocessed: true,
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    product_specific: true,
+}
+
+android_app_import {
     name: "VZWAPNLib",
     owner: "nothing",
     apk: "proprietary/product/app/VZWAPNLib/VZWAPNLib.apk",
@@ -28447,17 +28902,6 @@ android_app_import {
     name: "QCC",
     owner: "nothing",
     apk: "proprietary/system_ext/app/QCC/QCC.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    system_ext_specific: true,
-}
-
-android_app_import {
-    name: "QtiTelephonyService",
-    owner: "nothing",
-    apk: "proprietary/system_ext/app/QtiTelephonyService/QtiTelephonyService.apk",
     certificate: "platform",
     dex_preopt: {
         enabled: false,
@@ -28834,15 +29278,6 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
-    name: "android.hardware.graphics.mapper-impl-qti-display.xml",
-    owner: "nothing",
-    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.graphics.mapper-impl-qti-display.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
     name: "android.hardware.radio.config.xml",
     owner: "nothing",
     src: "proprietary/vendor/etc/vintf/manifest/android.hardware.radio.config.xml",
@@ -29077,18 +29512,18 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
-    name: "vendor.noth.hardware.sensor.sensor_extension-service.xml",
+    name: "vendor.noth.hardware.charge-service.xml",
     owner: "nothing",
-    src: "proprietary/vendor/etc/vintf/manifest/vendor.noth.hardware.sensor.sensor_extension-service.xml",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor.noth.hardware.charge-service.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,
 }
 
 prebuilt_etc_xml {
-    name: "vendor.nothing.hardware.biometrics.fingerprint-service.xml",
+    name: "vendor.noth.hardware.sensor.sensor_extension-service.xml",
     owner: "nothing",
-    src: "proprietary/vendor/etc/vintf/manifest/vendor.nothing.hardware.biometrics.fingerprint-service.xml",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor.noth.hardware.sensor.sensor_extension-service.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,
@@ -29161,24 +29596,6 @@ prebuilt_etc_xml {
     name: "vendor.qti.hardware.data.iwlandata.xml",
     owner: "nothing",
     src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.data.iwlandata.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
-    name: "vendor.qti.hardware.display.allocator-service.xml",
-    owner: "nothing",
-    src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.display.allocator-service.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
-    name: "vendor.qti.hardware.display.demura-service.xml",
-    owner: "nothing",
-    src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.display.demura-service.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,
@@ -29296,6 +29713,15 @@ prebuilt_etc_xml {
     name: "vendor.qti.hardware.radio.uim_remote_server.xml",
     owner: "nothing",
     src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.radio.uim_remote_server.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "vendor.qti.hardware.servicetrackeraidl-service.xml",
+    owner: "nothing",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.servicetrackeraidl-service.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,
@@ -29860,6 +30286,60 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "hdcp1prov",
+    owner: "nothing",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/hdcp1prov",
+            ],
+            shared_libs: [
+                "libdiag",
+                "liblog",
+                "libhdcp1prov",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "hdcp2p2prov",
+    owner: "nothing",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/hdcp2p2prov",
+            ],
+            shared_libs: [
+                "libdiag",
+                "liblog",
+                "libhdcp2p2prov",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "android.hardware.bluetooth@1.1-service-qti",
     owner: "nothing",
     target: {
@@ -30114,21 +30594,20 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "vendor.noth.hardware.sensor.sensor_extension-service",
+    name: "vendor.noth.hardware.charge-service",
     owner: "nothing",
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/bin/hw/vendor.noth.hardware.sensor.sensor_extension-service",
+                "proprietary/vendor/bin/hw/vendor.noth.hardware.charge-service",
             ],
             shared_libs: [
-                "vendor.noth.hardware.sensor.sensor_extension-V1-ndk_platform",
                 "libbase",
                 "libbinder_ndk",
                 "libutils",
                 "liblog",
                 "libcutils",
-                "libsensor_extension",
+                "vendor.noth.hardware.charge-V1-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -30146,21 +30625,21 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "vendor.nothing.hardware.biometrics.fingerprint-service",
+    name: "vendor.noth.hardware.sensor.sensor_extension-service",
     owner: "nothing",
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/bin/hw/vendor.nothing.hardware.biometrics.fingerprint-service",
+                "proprietary/vendor/bin/hw/vendor.noth.hardware.sensor.sensor_extension-service",
             ],
             shared_libs: [
+                "vendor.noth.hardware.sensor.sensor_extension-V1-ndk_platform",
                 "libbase",
                 "libbinder_ndk",
-                "android.hardware.biometrics.fingerprint-V3-ndk",
-                "android.hardware.biometrics.common-V3-ndk",
-                "libhardware",
+                "libutils",
                 "liblog",
                 "libcutils",
+                "libsensor_extension",
                 "libc++",
                 "libc",
                 "libm",
@@ -30293,51 +30772,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "vendor.qti.hardware.display.allocator-service",
-    owner: "nothing",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/vendor.qti.hardware.display.allocator-service",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libutils",
-                "libbinder",
-                "libbinder_ndk",
-                "libhidlbase",
-                "libgrallocutils",
-                "libgralloccore",
-                "libgralloctypes",
-                "vendor.qti.hardware.display.mapper@3.0",
-                "vendor.qti.hardware.display.mapper@4.0",
-                "android.hardware.graphics.mapper@4.0",
-                "android.hardware.graphics.mapper@3.0",
-                "android.hardware.graphics.mapper@2.1",
-                "vendor.qti.hardware.display.mapperextensions@1.0",
-                "vendor.qti.hardware.display.mapperextensions@1.1",
-                "libdmabufheap",
-                "vendor.qti.hardware.display.mapperextensions@1.2",
-                "vendor.qti.hardware.display.mapperextensions@1.3",
-                "android.hardware.graphics.allocator-V1-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
     name: "vendor.qti.hardware.display.color-service",
     owner: "nothing",
     target: {
@@ -30355,60 +30789,6 @@ cc_prebuilt_binary {
                 "libbinder",
                 "libbinder_ndk",
                 "libsdm-disp-vndapis",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "vendor.qti.hardware.display.composer-service",
-    owner: "nothing",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/vendor.qti.hardware.display.composer-service",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "vendor.qti.hardware.display.demura-service",
-    owner: "nothing",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/vendor.qti.hardware.display.demura-service",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libutils",
-                "libbinder",
-                "libbinder_ndk",
-                "libfilefinder",
-                "libdisplaydebug",
-                "libsdmutils",
-                "vendor.qti.hardware.display.demura-V1-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -30470,6 +30850,7 @@ cc_prebuilt_binary {
             shared_libs: [
                 "libbase",
                 "liblog",
+                "libcutils",
                 "libhardware",
                 "libbinder_ndk",
                 "android.hardware.light-V2-ndk",
@@ -30577,6 +30958,38 @@ cc_prebuilt_binary {
                 "libQSEEComAPI",
                 "vendor.qti.hardware.qseecom-V1-ndk",
                 "vendor.qti.hardware.qseecom@1.0-impl",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "vendor.qti.hardware.servicetrackeraidl-service",
+    owner: "nothing",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/hw/vendor.qti.hardware.servicetrackeraidl-service",
+            ],
+            shared_libs: [
+                "liblog",
+                "libbase",
+                "libhardware",
+                "libutils",
+                "libbinder_ndk",
+                "vendor.qti.hardware.servicetrackeraidl-V1-ndk",
+                "vendor.qti.hardware.servicetrackeraidl-impl",
                 "libc++",
                 "libc",
                 "libm",
@@ -30860,6 +31273,22 @@ sh_binary {
 }
 
 sh_binary {
+    name: "init.kernel.post_boot-volcano_3_3_1",
+    owner: "nothing",
+    src: "proprietary/vendor/bin/init.kernel.post_boot-volcano_3_3_1.sh",
+    filename: "init.kernel.post_boot-volcano_3_3_1.sh",
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "init.kernel.post_boot-volcano_4_2_1",
+    owner: "nothing",
+    src: "proprietary/vendor/bin/init.kernel.post_boot-volcano_4_2_1.sh",
+    filename: "init.kernel.post_boot-volcano_4_2_1.sh",
+    soc_specific: true,
+}
+
+sh_binary {
     name: "init.kernel.post_boot-volcano_4_3_0",
     owner: "nothing",
     src: "proprietary/vendor/bin/init.kernel.post_boot-volcano_4_3_0.sh",
@@ -30888,14 +31317,6 @@ sh_binary {
     owner: "nothing",
     src: "proprietary/vendor/bin/init.qcom.sensors.sh",
     filename: "init.qcom.sensors.sh",
-    soc_specific: true,
-}
-
-sh_binary {
-    name: "init.qti.display_boot",
-    owner: "nothing",
-    src: "proprietary/vendor/bin/init.qti.display_boot.sh",
-    filename: "init.qti.display_boot.sh",
     soc_specific: true,
 }
 
@@ -30978,6 +31399,33 @@ cc_prebuilt_binary {
                 "liblog",
                 "libc++",
                 "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "ks",
+    owner: "nothing",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/ks",
+            ],
+            shared_libs: [
+                "libc",
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libc++",
                 "libm",
                 "libdl",
             ],
@@ -32143,39 +32591,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "trusteduilistener",
-    owner: "nothing",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/trusteduilistener",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "libminksocket_vendor",
-                "liblog",
-                "vendor.qti.hardware.systemhelper@1.0",
-                "libhidlbase",
-                "libutils",
-                "libcutils",
-                "libTrustedInputUtils",
-                "vendor.qti.hardware.display.config-V7-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
     name: "vendor.dpmd",
     owner: "nothing",
     target: {
@@ -32595,10 +33010,10 @@ cc_prebuilt_binary {
 }
 
 install_symlink {
-    name: "system_ext_priv-app_ims_lib_arm64_libimscamera_jni_so",
+    name: "system_ext_priv-app_ims_lib_arm64_libSurfaceUtil_jni_so",
     system_ext_specific: true,
-    installed_location: "priv-app/ims/lib/arm64/libimscamera_jni.so",
-    symlink_target: "/system_ext/lib64/libimscamera_jni.so",
+    installed_location: "priv-app/ims/lib/arm64/libSurfaceUtil_jni.so",
+    symlink_target: "/system_ext/lib64/libSurfaceUtil_jni.so",
 }
 
 install_symlink {
