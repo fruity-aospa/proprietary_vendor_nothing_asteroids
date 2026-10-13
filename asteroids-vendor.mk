@@ -315,7 +315,6 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/asteroids/proprietary/vendor/etc/init/shsusrd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/shsusrd.rc \
     vendor/nothing/asteroids/proprietary/vendor/etc/init/ssgtzd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ssgtzd.rc \
     vendor/nothing/asteroids/proprietary/vendor/etc/init/vendor.dpmd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dpmd.rc \
-    vendor/nothing/asteroids/proprietary/vendor/etc/init/vendor.noth.hardware.charge-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.noth.hardware.charge-service.rc \
     vendor/nothing/asteroids/proprietary/vendor/etc/init/vendor.noth.hardware.sensor.sensor_extension-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.noth.hardware.sensor.sensor_extension-service.rc \
     vendor/nothing/asteroids/proprietary/vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.adsprpc-guestos-service.rc \
     vendor/nothing/asteroids/proprietary/vendor/etc/init/vendor.qti.audio-adsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.audio-adsprpc-service.rc \
@@ -440,6 +439,100 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/asteroids/proprietary/vendor/etc/qcril_database/upgrade/other/0013_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/0013_version_update_ecc_table.sql \
     vendor/nothing/asteroids/proprietary/vendor/etc/qcril_database/upgrade/other/0014_version_update_modules.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/0014_version_update_modules.sql \
     vendor/nothing/asteroids/proprietary/vendor/etc/qcril_database/upgrade/other/0015_version_add_iccid_clir_pref_table.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/0015_version_add_iccid_clir_pref_table.sql \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/NT_OnOff_button.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/NT_OnOff_button.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/NT_camera_photo.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/NT_camera_photo.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/NT_camera_zoom.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/NT_camera_zoom.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/NT_charge.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/NT_charge.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/NT_letters_navi.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/NT_letters_navi.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/NT_unlock_error.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/NT_unlock_error.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/NT_unlock_successful.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/NT_unlock_successful.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/alarm/arp.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/alarm/arp.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/alarm/crab.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/alarm/crab.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/alarm/fidget.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/alarm/fidget.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/alarm/grains.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/alarm/grains.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/alarm/pace.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/alarm/pace.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/alarm/reflect.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/alarm/reflect.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/alarm/repeater.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/alarm/repeater.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/alarm/saw.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/alarm/saw.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/alarm/shake.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/alarm/shake.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/alarm/trad.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/alarm/trad.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/common_notification1.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/common_notification1.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/common_notification2.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/common_notification2.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/common_ringtone1.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/common_ringtone1.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/common_ringtone2.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/common_ringtone2.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/default/click.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/default/click.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/default/double_click.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/default/double_click.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/default/heavy_click.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/default/heavy_click.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/default/pop.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/default/pop.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/default/texture_tick.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/default/texture_tick.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/default/thud.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/default/thud.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/default/tick.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/default/tick.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/notification/beak.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/notification/beak.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/notification/bulb_one.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/notification/bulb_one.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/notification/cough.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/notification/cough.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/notification/croak.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/notification/croak.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/notification/cuckoo.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/notification/cuckoo.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/notification/doub.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/notification/doub.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/notification/flap.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/notification/flap.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/notification/gargle.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/notification/gargle.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/notification/guiro.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/notification/guiro.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/notification/hum.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/notification/hum.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/notification/lonba.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/notification/lonba.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/notification/nope.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/notification/nope.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/notification/oi!.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/notification/oi!.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/notification/pep.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/notification/pep.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/notification/rude.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/notification/rude.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/notification/sharp.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/notification/sharp.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/notification/swanny.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/notification/swanny.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/notification/woo.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/notification/woo.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/notification/yeh.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/notification/yeh.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/notification/zip.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/notification/zip.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/ringtone/abra.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/ringtone/abra.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/ringtone/anna.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/ringtone/anna.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/ringtone/beetle.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/ringtone/beetle.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/ringtone/clwb.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/ringtone/clwb.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/ringtone/coded.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/ringtone/coded.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/ringtone/crossing.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/ringtone/crossing.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/ringtone/dolphin.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/ringtone/dolphin.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/ringtone/hammer.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/ringtone/hammer.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/ringtone/latency.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/ringtone/latency.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/ringtone/plot.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/ringtone/plot.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/ringtone/pneumatic.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/ringtone/pneumatic.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/ringtone/pulse.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/ringtone/pulse.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/ringtone/radiate.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/ringtone/radiate.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/ringtone/ripple.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/ringtone/ripple.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/ringtone/squirrels.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/ringtone/squirrels.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/ringtone/sticks.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/ringtone/sticks.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/ringtone/tennis.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/ringtone/tennis.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/ringtone/wings.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/ringtone/wings.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/ringtone/wizard.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/ringtone/wizard.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/ringtone/woo_yeh.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/ringtone/woo_yeh.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/strong/NT_OnOff_button.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/strong/NT_OnOff_button.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/strong/NT_camera_photo.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/strong/NT_camera_photo.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/strong/NT_camera_zoom.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/strong/NT_camera_zoom.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/strong/NT_letters_navi.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/strong/NT_letters_navi.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/strong/NT_unlock_error.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/strong/NT_unlock_error.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/strong/NT_unlock_successful.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/strong/NT_unlock_successful.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/strong/click.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/strong/click.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/strong/double_click.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/strong/double_click.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/strong/heavy_click.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/strong/heavy_click.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/strong/pop.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/strong/pop.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/strong/texture_tick.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/strong/texture_tick.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/strong/thud.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/strong/thud.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/strong/tick.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/strong/tick.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/weak/NT_OnOff_button.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/weak/NT_OnOff_button.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/weak/NT_camera_photo.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/weak/NT_camera_photo.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/weak/NT_camera_zoom.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/weak/NT_camera_zoom.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/weak/NT_letters_navi.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/weak/NT_letters_navi.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/weak/NT_unlock_error.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/weak/NT_unlock_error.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/weak/NT_unlock_successful.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/weak/NT_unlock_successful.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/weak/click.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/weak/click.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/weak/double_click.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/weak/double_click.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/weak/heavy_click.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/weak/heavy_click.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/weak/pop.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/weak/pop.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/weak/texture_tick.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/weak/texture_tick.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/weak/thud.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/weak/thud.he \
+    vendor/nothing/asteroids/proprietary/vendor/etc/richtapresources/weak/tick.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/weak/tick.he \
     vendor/nothing/asteroids/proprietary/vendor/etc/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf \
     vendor/nothing/asteroids/proprietary/vendor/etc/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config \
     vendor/nothing/asteroids/proprietary/vendor/etc/seccomp_policy/atfwd@2.0.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/atfwd@2.0.policy \
@@ -531,7 +624,6 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/asteroids/proprietary/vendor/etc/sensors/config/volcano_tmd2755_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/volcano_tmd2755_0.json \
     vendor/nothing/asteroids/proprietary/vendor/etc/sensors/config/volcano_vertigo_lsm6dso_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/volcano_vertigo_lsm6dso_0.json \
     vendor/nothing/asteroids/proprietary/vendor/etc/sensors/config/volcano_vertigo_mmc56x3x_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/volcano_vertigo_mmc56x3x_0.json \
-    vendor/nothing/asteroids/proprietary/vendor/etc/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
     vendor/nothing/asteroids/proprietary/vendor/etc/sensors/sns_reg_config:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sns_reg_config \
     vendor/nothing/asteroids/proprietary/vendor/etc/snapdragon_color_libs_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/snapdragon_color_libs_config.xml \
     vendor/nothing/asteroids/proprietary/vendor/etc/ssg/ta_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/ssg/ta_config.json \
@@ -1381,7 +1473,6 @@ PRODUCT_PACKAGES += \
     vendor.libdpmframework \
     vendor.libdpmtcm \
     vendor.libmwqemiptablemgr \
-    vendor.noth.hardware.charge-V1-ndk \
     vendor.noth.hardware.sensor.sensor_extension-V1-ndk_platform \
     vendor.qti.ImsRtpService-V1-ndk_vendor \
     vendor.qti.ImsRtpService-aidl-Impl \
@@ -1629,7 +1720,6 @@ PRODUCT_PACKAGES += \
     qms-saidl.xml \
     qspa-nav.xml \
     qtiradio-saidl.xml \
-    vendor.noth.hardware.charge-service.xml \
     vendor.noth.hardware.sensor.sensor_extension-service.xml \
     vendor.qti.camera.offlinecamera-impl.xml \
     vendor.qti.camera.postproc-impl.xml \
@@ -1683,7 +1773,6 @@ PRODUCT_PACKAGES += \
     android.hardware.security.keymint-service-qti \
     pasrknob \
     qcrilNrd \
-    vendor.noth.hardware.charge-service \
     vendor.noth.hardware.sensor.sensor_extension-service \
     vendor.qti.camera.provider-service_64 \
     vendor.qti.hardware.alarm-service \
