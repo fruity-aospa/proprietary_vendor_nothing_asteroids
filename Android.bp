@@ -6,10 +6,6 @@ soong_namespace {
     imports: [
         "hardware/nothing",
         "hardware/qcom-caf/sm8650",
-        "hardware/qcom-caf/wlan",
-        "vendor/qcom/opensource/commonsys/display",
-        "vendor/qcom/opensource/commonsys-intf/display",
-        "vendor/qcom/opensource/dataservices",
     ],
 }
 
@@ -25133,6 +25129,7 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
+/*
 cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.fm@1.0",
     owner: "nothing",
@@ -25160,6 +25157,7 @@ cc_prebuilt_library_shared {
     prefer: true,
     soc_specific: true,
 }
+*/
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.iop@1.0",
