@@ -11,31 +11,6 @@ soong_namespace {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.diaghal-V1-ndk",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system/lib64/vendor.qti.diaghal-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "android.hardware.common-V2-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-}
-
-cc_prebuilt_library_shared {
     name: "btaudio_offload_if",
     owner: "nothing",
     strip: {
@@ -6750,7 +6725,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.imscmservice@2.0",
+    name: "com.qualcomm.qti.imscmservice@2.0_vendor",
+    stem: "com.qualcomm.qti.imscmservice@2.0",
     owner: "nothing",
     strip: {
         none: true,
@@ -6778,7 +6754,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.imscmservice@2.1",
+    name: "com.qualcomm.qti.imscmservice@2.1_vendor",
+    stem: "com.qualcomm.qti.imscmservice@2.1",
     owner: "nothing",
     strip: {
         none: true,
@@ -6789,7 +6766,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/com.qualcomm.qti.imscmservice@2.1.so",
             ],
             shared_libs: [
-                "com.qualcomm.qti.imscmservice@2.0",
+                "com.qualcomm.qti.imscmservice@2.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -6807,7 +6784,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.imscmservice@2.2",
+    name: "com.qualcomm.qti.imscmservice@2.2_vendor",
+    stem: "com.qualcomm.qti.imscmservice@2.2",
     owner: "nothing",
     strip: {
         none: true,
@@ -6818,8 +6796,8 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/com.qualcomm.qti.imscmservice@2.2.so",
             ],
             shared_libs: [
-                "com.qualcomm.qti.imscmservice@2.0",
-                "com.qualcomm.qti.imscmservice@2.1",
+                "com.qualcomm.qti.imscmservice@2.0_vendor",
+                "com.qualcomm.qti.imscmservice@2.1_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -6887,7 +6865,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.uceservice@2.0",
+    name: "com.qualcomm.qti.uceservice@2.0_vendor",
+    stem: "com.qualcomm.qti.uceservice@2.0",
     owner: "nothing",
     strip: {
         none: true,
@@ -6915,7 +6894,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.uceservice@2.1",
+    name: "com.qualcomm.qti.uceservice@2.1_vendor",
+    stem: "com.qualcomm.qti.uceservice@2.1",
     owner: "nothing",
     strip: {
         none: true,
@@ -6926,7 +6906,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/com.qualcomm.qti.uceservice@2.1.so",
             ],
             shared_libs: [
-                "com.qualcomm.qti.uceservice@2.0",
+                "com.qualcomm.qti.uceservice@2.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -6944,7 +6924,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.uceservice@2.2",
+    name: "com.qualcomm.qti.uceservice@2.2_vendor",
+    stem: "com.qualcomm.qti.uceservice@2.2",
     owner: "nothing",
     strip: {
         none: true,
@@ -6955,8 +6936,8 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/com.qualcomm.qti.uceservice@2.2.so",
             ],
             shared_libs: [
-                "com.qualcomm.qti.uceservice@2.0",
-                "com.qualcomm.qti.uceservice@2.1",
+                "com.qualcomm.qti.uceservice@2.0_vendor",
+                "com.qualcomm.qti.uceservice@2.1_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -6974,7 +6955,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.uceservice@2.3",
+    name: "com.qualcomm.qti.uceservice@2.3_vendor",
+    stem: "com.qualcomm.qti.uceservice@2.3",
     owner: "nothing",
     strip: {
         none: true,
@@ -6985,9 +6967,9 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/com.qualcomm.qti.uceservice@2.3.so",
             ],
             shared_libs: [
-                "com.qualcomm.qti.uceservice@2.0",
-                "com.qualcomm.qti.uceservice@2.1",
-                "com.qualcomm.qti.uceservice@2.2",
+                "com.qualcomm.qti.uceservice@2.0_vendor",
+                "com.qualcomm.qti.uceservice@2.1_vendor",
+                "com.qualcomm.qti.uceservice@2.2_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -8182,12 +8164,12 @@ cc_prebuilt_library_shared {
                 "libdiag",
                 "libqmi_common_so",
                 "libcneapiclient",
-                "vendor.qti.ims.factory@1.0",
-                "vendor.qti.ims.factory@1.1",
+                "vendor.qti.ims.factory@1.0_vendor",
+                "vendor.qti.ims.factory@1.1_vendor",
                 "libnetutils",
                 "libz",
                 "libbinder_ndk",
-                "vendor.qti.ims.factoryaidlservice-V1-ndk",
+                "vendor.qti.ims.factoryaidlservice-V1-ndk_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -8323,17 +8305,17 @@ cc_prebuilt_library_shared {
                 "libhidlbase",
                 "libqmiservices",
                 "libqmi_encdec",
-                "com.qualcomm.qti.uceservice@2.0",
-                "com.qualcomm.qti.uceservice@2.1",
-                "com.qualcomm.qti.uceservice@2.2",
-                "com.qualcomm.qti.uceservice@2.3",
-                "com.qualcomm.qti.imscmservice@2.0",
-                "com.qualcomm.qti.imscmservice@2.1",
-                "com.qualcomm.qti.imscmservice@2.2",
-                "vendor.qti.ims.rcsuceaidlservice-V1-ndk",
-                "vendor.qti.ims.connectionaidlservice-V1-ndk",
-                "vendor.qti.ims.rcssipaidlservice-V1-ndk",
-                "vendor.qti.ims.factoryaidlservice-V1-ndk",
+                "com.qualcomm.qti.uceservice@2.0_vendor",
+                "com.qualcomm.qti.uceservice@2.1_vendor",
+                "com.qualcomm.qti.uceservice@2.2_vendor",
+                "com.qualcomm.qti.uceservice@2.3_vendor",
+                "com.qualcomm.qti.imscmservice@2.0_vendor",
+                "com.qualcomm.qti.imscmservice@2.1_vendor",
+                "com.qualcomm.qti.imscmservice@2.2_vendor",
+                "vendor.qti.ims.rcsuceaidlservice-V1-ndk_vendor",
+                "vendor.qti.ims.connectionaidlservice-V1-ndk_vendor",
+                "vendor.qti.ims.rcssipaidlservice-V1-ndk_vendor",
+                "vendor.qti.ims.factoryaidlservice-V1-ndk_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -8372,15 +8354,15 @@ cc_prebuilt_library_shared {
                 "libidl",
                 "libqti_vndfwk_detect_vendor",
                 "libandroid_net",
-                "vendor.qti.ims.callinfo@1.0",
-                "vendor.qti.ims.rcsconfig@2.0",
-                "vendor.qti.ims.rcsconfig@2.1",
-                "vendor.qti.ims.factory@1.0",
-                "vendor.qti.ims.factory@1.1",
-                "vendor.qti.ims.callcapability@1.0",
-                "vendor.qti.ims.callcapabilityaidlservice-V1-ndk",
-                "vendor.qti.ims.configaidlservice-V1-ndk",
-                "vendor.qti.ims.factoryaidlservice-V1-ndk",
+                "vendor.qti.ims.callinfo@1.0_vendor",
+                "vendor.qti.ims.rcsconfig@2.0_vendor",
+                "vendor.qti.ims.rcsconfig@2.1_vendor",
+                "vendor.qti.ims.factory@1.0_vendor",
+                "vendor.qti.ims.factory@1.1_vendor",
+                "vendor.qti.ims.callcapability@1.0_vendor",
+                "vendor.qti.ims.callcapabilityaidlservice-V1-ndk_vendor",
+                "vendor.qti.ims.configaidlservice-V1-ndk_vendor",
+                "vendor.qti.ims.factoryaidlservice-V1-ndk_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -8654,7 +8636,7 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libbinder_ndk",
                 "libandroid_runtime_lazy",
-                "vendor.qti.data.factoryservice-V1-ndk",
+                "vendor.qti.data.factoryservice-V1-ndk_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -9249,7 +9231,7 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "liblog",
                 "libbinder_ndk",
-                "vendor.qti.hardware.data.iwlandata-V1-ndk",
+                "vendor.qti.hardware.data.iwlandata-V1-ndk_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -11747,17 +11729,17 @@ cc_prebuilt_library_shared {
                 "libandroid_net",
                 "android.hardware.wifi.supplicant-V1-ndk",
                 "android.hardware.wifi.hostapd-V1-ndk",
-                "vendor.qti.data.factoryservice-V1-ndk",
-                "vendor.qti.hardware.data.dynamicddsaidlservice-V1-ndk",
-                "vendor.qti.hardware.data.qmiaidlservice-V1-ndk",
-                "vendor.qti.hardware.data.flowaidlservice-V1-ndk",
-                "vendor.qti.hardware.data.lceaidlservice-V1-ndk",
-                "vendor.qti.latencyaidlservice-V1-ndk",
-                "vendor.qti.data.mwqemaidlservice-V1-ndk",
-                "vendor.qti.hardware.data.cneaidlservice.internal.server-V1-ndk",
-                "vendor.qti.hardware.data.cneaidlservice.internal.constants-V1-ndk",
-                "vendor.qti.hardware.data.cneaidlservice.internal.api-V1-ndk",
-                "vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk",
+                "vendor.qti.data.factoryservice-V1-ndk_vendor",
+                "vendor.qti.hardware.data.dynamicddsaidlservice-V1-ndk_vendor",
+                "vendor.qti.hardware.data.qmiaidlservice-V1-ndk_vendor",
+                "vendor.qti.hardware.data.flowaidlservice-V1-ndk_vendor",
+                "vendor.qti.hardware.data.lceaidlservice-V1-ndk_vendor",
+                "vendor.qti.latencyaidlservice-V1-ndk_vendor",
+                "vendor.qti.data.mwqemaidlservice-V1-ndk_vendor",
+                "vendor.qti.hardware.data.cneaidlservice.internal.server-V1-ndk_vendor",
+                "vendor.qti.hardware.data.cneaidlservice.internal.constants-V1-ndk_vendor",
+                "vendor.qti.hardware.data.cneaidlservice.internal.api-V1-ndk_vendor",
+                "vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk_vendor",
                 "libwpa_client",
                 "libc++",
                 "libc",
@@ -11790,7 +11772,7 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "libdiag",
                 "liblog",
-                "vendor.qti.data.factoryservice-V1-ndk",
+                "vendor.qti.data.factoryservice-V1-ndk_vendor",
                 "libandroid_net",
                 "libc++",
                 "libc",
@@ -17355,7 +17337,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libqcrilDataModule.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.data.iwlandata-V1-ndk",
+                "vendor.qti.hardware.data.iwlandata-V1-ndk_vendor",
                 "android.hardware.radio@1.6",
                 "vendor.qti.hardware.data.connectionaidl-V1-ndk",
                 "libqdpr",
@@ -17822,9 +17804,9 @@ cc_prebuilt_library_shared {
                 "libqcrilNrLogger",
                 "libutils",
                 "libbinder_ndk",
-                "vendor.qti.hardware.data.connectionfactory-V1-ndk",
-                "vendor.qti.hardware.data.ka-V1-ndk",
-                "vendor.qti.hardware.data.dataactivity-V1-ndk",
+                "vendor.qti.hardware.data.connectionfactory-V1-ndk_vendor",
+                "vendor.qti.hardware.data.ka-V1-ndk_vendor",
+                "vendor.qti.hardware.data.dataactivity-V1-ndk_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -17880,9 +17862,9 @@ cc_prebuilt_library_shared {
                 "qcrilNrQmiModule",
                 "libqmi_cci",
                 "libqmiservices",
-                "vendor.qti.ims.factoryaidlservice-V1-ndk",
+                "vendor.qti.ims.factoryaidlservice-V1-ndk_vendor",
                 "libbinder_ndk",
-                "vendor.qti.ims.connectionaidlservice-V1-ndk",
+                "vendor.qti.ims.connectionaidlservice-V1-ndk_vendor",
                 "libutils",
                 "libc++",
                 "libc",
@@ -21689,9 +21671,9 @@ cc_prebuilt_library_shared {
                 "libcneoplookup",
                 "libandroid_net",
                 "libutils",
-                "vendor.qti.hardware.data.cneaidlservice.internal.server-V1-ndk",
-                "vendor.qti.hardware.data.cneaidlservice.internal.api-V1-ndk",
-                "vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk",
+                "vendor.qti.hardware.data.cneaidlservice.internal.server-V1-ndk_vendor",
+                "vendor.qti.hardware.data.cneaidlservice.internal.api-V1-ndk_vendor",
+                "vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -21729,9 +21711,9 @@ cc_prebuilt_library_shared {
                 "libxml2",
                 "libandroid_net",
                 "libqti_vndfwk_detect_vendor",
-                "vendor.qti.hardware.data.cneaidlservice.internal.server-V1-ndk",
-                "vendor.qti.hardware.data.cneaidlservice.internal.api-V1-ndk",
-                "vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk",
+                "vendor.qti.hardware.data.cneaidlservice.internal.server-V1-ndk_vendor",
+                "vendor.qti.hardware.data.cneaidlservice.internal.api-V1-ndk_vendor",
+                "vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -23132,7 +23114,7 @@ cc_prebuilt_library_shared {
                 "libbinder_ndk",
                 "com.qualcomm.qti.dpm.api@1.0_vendor",
                 "vendor.qti.hardware.dpmaidlservice-V1-ndk_vendor",
-                "vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk",
+                "vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -23232,7 +23214,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.data.factoryservice-V1-ndk",
+    name: "vendor.qti.data.factoryservice-V1-ndk_vendor",
+    stem: "vendor.qti.data.factoryservice-V1-ndk",
     owner: "nothing",
     strip: {
         none: true,
@@ -23244,14 +23227,14 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libbinder_ndk",
-                "vendor.qti.hardware.data.dynamicddsaidlservice-V1-ndk",
-                "vendor.qti.hardware.data.qmiaidlservice-V1-ndk",
-                "vendor.qti.hardware.data.lceaidlservice-V1-ndk",
-                "vendor.qti.hardware.data.flowaidlservice-V1-ndk",
-                "vendor.qti.hardware.data.cneaidlservice.internal.api-V1-ndk",
-                "vendor.qti.hardware.data.cneaidlservice.internal.server-V1-ndk",
-                "vendor.qti.latencyaidlservice-V1-ndk",
-                "vendor.qti.data.mwqemaidlservice-V1-ndk",
+                "vendor.qti.hardware.data.dynamicddsaidlservice-V1-ndk_vendor",
+                "vendor.qti.hardware.data.qmiaidlservice-V1-ndk_vendor",
+                "vendor.qti.hardware.data.lceaidlservice-V1-ndk_vendor",
+                "vendor.qti.hardware.data.flowaidlservice-V1-ndk_vendor",
+                "vendor.qti.hardware.data.cneaidlservice.internal.api-V1-ndk_vendor",
+                "vendor.qti.hardware.data.cneaidlservice.internal.server-V1-ndk_vendor",
+                "vendor.qti.latencyaidlservice-V1-ndk_vendor",
+                "vendor.qti.data.mwqemaidlservice-V1-ndk_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -23265,7 +23248,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.data.mwqemaidlservice-V1-ndk",
+    name: "vendor.qti.data.mwqemaidlservice-V1-ndk_vendor",
+    stem: "vendor.qti.data.mwqemaidlservice-V1-ndk",
     owner: "nothing",
     strip: {
         none: true,
@@ -23679,7 +23663,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.cneaidlservice.internal.api-V1-ndk",
+    name: "vendor.qti.hardware.data.cneaidlservice.internal.api-V1-ndk_vendor",
+    stem: "vendor.qti.hardware.data.cneaidlservice.internal.api-V1-ndk",
     owner: "nothing",
     strip: {
         none: true,
@@ -23691,7 +23676,7 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libbinder_ndk",
-                "vendor.qti.hardware.data.cneaidlservice.internal.constants-V1-ndk",
+                "vendor.qti.hardware.data.cneaidlservice.internal.constants-V1-ndk_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -23705,7 +23690,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.cneaidlservice.internal.constants-V1-ndk",
+    name: "vendor.qti.hardware.data.cneaidlservice.internal.constants-V1-ndk_vendor",
+    stem: "vendor.qti.hardware.data.cneaidlservice.internal.constants-V1-ndk",
     owner: "nothing",
     strip: {
         none: true,
@@ -23730,7 +23716,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.cneaidlservice.internal.server-V1-ndk",
+    name: "vendor.qti.hardware.data.cneaidlservice.internal.server-V1-ndk_vendor",
+    stem: "vendor.qti.hardware.data.cneaidlservice.internal.server-V1-ndk",
     owner: "nothing",
     strip: {
         none: true,
@@ -23742,7 +23729,7 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libbinder_ndk",
-                "vendor.qti.hardware.data.cneaidlservice.internal.constants-V1-ndk",
+                "vendor.qti.hardware.data.cneaidlservice.internal.constants-V1-ndk_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -23781,7 +23768,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.connectionfactory-V1-ndk",
+    name: "vendor.qti.hardware.data.connectionfactory-V1-ndk_vendor",
+    stem: "vendor.qti.hardware.data.connectionfactory-V1-ndk",
     owner: "nothing",
     strip: {
         none: true,
@@ -23793,8 +23781,8 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libbinder_ndk",
-                "vendor.qti.hardware.data.dataactivity-V1-ndk",
-                "vendor.qti.hardware.data.ka-V1-ndk",
+                "vendor.qti.hardware.data.dataactivity-V1-ndk_vendor",
+                "vendor.qti.hardware.data.ka-V1-ndk_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -23808,7 +23796,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.dataactivity-V1-ndk",
+    name: "vendor.qti.hardware.data.dataactivity-V1-ndk_vendor",
+    stem: "vendor.qti.hardware.data.dataactivity-V1-ndk",
     owner: "nothing",
     strip: {
         none: true,
@@ -23833,7 +23822,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.dynamicddsaidlservice-V1-ndk",
+    name: "vendor.qti.hardware.data.dynamicddsaidlservice-V1-ndk_vendor",
+    stem: "vendor.qti.hardware.data.dynamicddsaidlservice-V1-ndk",
     owner: "nothing",
     strip: {
         none: true,
@@ -23858,7 +23848,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.flowaidlservice-V1-ndk",
+    name: "vendor.qti.hardware.data.flowaidlservice-V1-ndk_vendor",
+    stem: "vendor.qti.hardware.data.flowaidlservice-V1-ndk",
     owner: "nothing",
     strip: {
         none: true,
@@ -23883,7 +23874,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.iwlandata-V1-ndk",
+    name: "vendor.qti.hardware.data.iwlandata-V1-ndk_vendor",
+    stem: "vendor.qti.hardware.data.iwlandata-V1-ndk",
     owner: "nothing",
     strip: {
         none: true,
@@ -23911,7 +23903,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.ka-V1-ndk",
+    name: "vendor.qti.hardware.data.ka-V1-ndk_vendor",
+    stem: "vendor.qti.hardware.data.ka-V1-ndk",
     owner: "nothing",
     strip: {
         none: true,
@@ -23936,7 +23929,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.lceaidlservice-V1-ndk",
+    name: "vendor.qti.hardware.data.lceaidlservice-V1-ndk_vendor",
+    stem: "vendor.qti.hardware.data.lceaidlservice-V1-ndk",
     owner: "nothing",
     strip: {
         none: true,
@@ -23961,7 +23955,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.qmiaidlservice-V1-ndk",
+    name: "vendor.qti.hardware.data.qmiaidlservice-V1-ndk_vendor",
+    stem: "vendor.qti.hardware.data.qmiaidlservice-V1-ndk",
     owner: "nothing",
     strip: {
         none: true,
@@ -24188,7 +24183,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk",
+    name: "vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk_vendor",
+    stem: "vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk",
     owner: "nothing",
     strip: {
         none: true,
@@ -24783,7 +24779,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.callcapability@1.0",
+    name: "vendor.qti.ims.callcapability@1.0_vendor",
+    stem: "vendor.qti.ims.callcapability@1.0",
     owner: "nothing",
     strip: {
         none: true,
@@ -24811,7 +24808,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.callcapabilityaidlservice-V1-ndk",
+    name: "vendor.qti.ims.callcapabilityaidlservice-V1-ndk_vendor",
+    stem: "vendor.qti.ims.callcapabilityaidlservice-V1-ndk",
     owner: "nothing",
     strip: {
         none: true,
@@ -24836,7 +24834,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.callinfo@1.0",
+    name: "vendor.qti.ims.callinfo@1.0_vendor",
+    stem: "vendor.qti.ims.callinfo@1.0",
     owner: "nothing",
     strip: {
         none: true,
@@ -24864,7 +24863,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.configaidlservice-V1-ndk",
+    name: "vendor.qti.ims.configaidlservice-V1-ndk_vendor",
+    stem: "vendor.qti.ims.configaidlservice-V1-ndk",
     owner: "nothing",
     strip: {
         none: true,
@@ -24889,7 +24889,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.connectionaidlservice-V1-ndk",
+    name: "vendor.qti.ims.connectionaidlservice-V1-ndk_vendor",
+    stem: "vendor.qti.ims.connectionaidlservice-V1-ndk",
     owner: "nothing",
     strip: {
         none: true,
@@ -24914,7 +24915,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.factory@1.0",
+    name: "vendor.qti.ims.factory@1.0_vendor",
+    stem: "vendor.qti.ims.factory@1.0",
     owner: "nothing",
     strip: {
         none: true,
@@ -24925,8 +24927,8 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.ims.factory@1.0.so",
             ],
             shared_libs: [
-                "vendor.qti.ims.callcapability@1.0",
-                "vendor.qti.ims.rcsconfig@2.0",
+                "vendor.qti.ims.callcapability@1.0_vendor",
+                "vendor.qti.ims.rcsconfig@2.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -24944,7 +24946,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.factory@1.1",
+    name: "vendor.qti.ims.factory@1.1_vendor",
+    stem: "vendor.qti.ims.factory@1.1",
     owner: "nothing",
     strip: {
         none: true,
@@ -24955,10 +24958,10 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.ims.factory@1.1.so",
             ],
             shared_libs: [
-                "vendor.qti.ims.callcapability@1.0",
-                "vendor.qti.ims.factory@1.0",
-                "vendor.qti.ims.rcsconfig@2.0",
-                "vendor.qti.ims.rcsconfig@2.1",
+                "vendor.qti.ims.callcapability@1.0_vendor",
+                "vendor.qti.ims.factory@1.0_vendor",
+                "vendor.qti.ims.rcsconfig@2.0_vendor",
+                "vendor.qti.ims.rcsconfig@2.1_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -24976,7 +24979,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.factoryaidlservice-V1-ndk",
+    name: "vendor.qti.ims.factoryaidlservice-V1-ndk_vendor",
+    stem: "vendor.qti.ims.factoryaidlservice-V1-ndk",
     owner: "nothing",
     strip: {
         none: true,
@@ -24988,11 +24992,11 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libbinder_ndk",
-                "vendor.qti.ims.rcsuceaidlservice-V1-ndk",
-                "vendor.qti.ims.rcssipaidlservice-V1-ndk",
-                "vendor.qti.ims.callcapabilityaidlservice-V1-ndk",
-                "vendor.qti.ims.connectionaidlservice-V1-ndk",
-                "vendor.qti.ims.configaidlservice-V1-ndk",
+                "vendor.qti.ims.rcsuceaidlservice-V1-ndk_vendor",
+                "vendor.qti.ims.rcssipaidlservice-V1-ndk_vendor",
+                "vendor.qti.ims.callcapabilityaidlservice-V1-ndk_vendor",
+                "vendor.qti.ims.connectionaidlservice-V1-ndk_vendor",
+                "vendor.qti.ims.configaidlservice-V1-ndk_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -25006,7 +25010,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.rcsconfig@2.0",
+    name: "vendor.qti.ims.rcsconfig@2.0_vendor",
+    stem: "vendor.qti.ims.rcsconfig@2.0",
     owner: "nothing",
     strip: {
         none: true,
@@ -25034,7 +25039,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.rcsconfig@2.1",
+    name: "vendor.qti.ims.rcsconfig@2.1_vendor",
+    stem: "vendor.qti.ims.rcsconfig@2.1",
     owner: "nothing",
     strip: {
         none: true,
@@ -25045,7 +25051,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so",
             ],
             shared_libs: [
-                "vendor.qti.ims.rcsconfig@2.0",
+                "vendor.qti.ims.rcsconfig@2.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -25063,7 +25069,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.rcssipaidlservice-V1-ndk",
+    name: "vendor.qti.ims.rcssipaidlservice-V1-ndk_vendor",
+    stem: "vendor.qti.ims.rcssipaidlservice-V1-ndk",
     owner: "nothing",
     strip: {
         none: true,
@@ -25088,7 +25095,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.rcsuceaidlservice-V1-ndk",
+    name: "vendor.qti.ims.rcsuceaidlservice-V1-ndk_vendor",
+    stem: "vendor.qti.ims.rcsuceaidlservice-V1-ndk",
     owner: "nothing",
     strip: {
         none: true,
@@ -25172,7 +25180,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.latencyaidlservice-V1-ndk",
+    name: "vendor.qti.latencyaidlservice-V1-ndk_vendor",
+    stem: "vendor.qti.latencyaidlservice-V1-ndk",
     owner: "nothing",
     strip: {
         none: true,
@@ -25569,377 +25578,6 @@ prebuilt_rfsa {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.dpm.api@1.0",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "lib-imsvideocodec",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/lib-imsvideocodec.so",
-            ],
-            shared_libs: [
-                "lib-imsvtutils",
-                "lib-imsvtextutils",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libdiag_system",
-                "libgui",
-                "libandroid",
-                "libnativewindow",
-                "libmediandk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "lib-imsvt",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/lib-imsvt.so",
-            ],
-            shared_libs: [
-                "lib-imsvideocodec",
-                "libmediandk",
-                "libnativewindow",
-                "libdmabufheap",
-                "lib-imsvtutils",
-                "libandroid",
-                "libhidlbase",
-                "vendor.qti.imsrtpservice@3.0",
-                "vendor.qti.imsrtpservice@3.1",
-                "libbinder",
-                "libbinder_ndk",
-                "vendor.qti.ImsRtpService-V2-ndk",
-                "libdiag_system",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "lib-imsvtextutils",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/lib-imsvtextutils.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libdiag_system",
-                "lib-imsvtutils",
-                "libGLESv2",
-                "libEGL",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "lib-imsvtutils",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/lib-imsvtutils.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libdiag_system",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libSurfaceUtil_jni",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libSurfaceUtil_jni.so",
-            ],
-            shared_libs: [
-                "libbinder",
-                "libgui",
-                "libnativehelper",
-                "libutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdiag_system",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libdiag_system.so",
-            ],
-            shared_libs: [
-                "vendor.qti.diaghal@1.0",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "android.hidl.allocator@1.0",
-                "android.hidl.memory@1.0",
-                "libhidlmemory",
-                "libc",
-                "libcutils",
-                "libbinder_ndk",
-                "vendor.qti.diaghal-V1-ndk",
-                "libc++",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdiagatbparser_system",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libdiagatbparser_system.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdpmctmgr",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libdpmctmgr.so",
-            ],
-            shared_libs: [
-                "libdiag_system",
-                "libbinder",
-                "libcutils",
-                "libutils",
-                "libdpmframework",
-                "com.qualcomm.qti.dpm.api@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdpmfdmgr",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libdpmfdmgr.so",
-            ],
-            shared_libs: [
-                "libdiag_system",
-                "libbinder",
-                "libcutils",
-                "libutils",
-                "libdpmframework",
-                "com.qualcomm.qti.dpm.api@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdpmframework",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libdpmframework.so",
-            ],
-            shared_libs: [
-                "libdiag_system",
-                "libbinder",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libhidlbase",
-                "libhardware",
-                "libhardware_legacy",
-                "com.qualcomm.qti.dpm.api@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdpmtcm",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libdpmtcm.so",
-            ],
-            shared_libs: [
-                "libdiag_system",
-                "libbinder",
-                "libcutils",
-                "libutils",
-                "libdpmframework",
-                "com.qualcomm.qti.dpm.api@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libencoderjpeg_jni",
     owner: "nothing",
     strip: {
@@ -25954,37 +25592,6 @@ cc_prebuilt_library_shared {
                 "libnativehelper",
                 "liblog",
                 "libjpeg",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libimsmedia_jni",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libimsmedia_jni.so",
-            ],
-            shared_libs: [
-                "libnativehelper",
-                "libcutils",
-                "libutils",
-                "libgui",
-                "libbinder",
-                "liblog",
-                "libandroid",
                 "libc++",
                 "libc",
                 "libm",
@@ -26881,139 +26488,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ImsRtpService-V1-ndk",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.ImsRtpService-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "android.hardware.common-V2-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.ImsRtpService-V2-ndk",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.ImsRtpService-V2-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "android.hardware.common-V2-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.diaghal@1.0",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.diaghal@1.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.dpmaidlservice-V1-ndk",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.hardware.dpmaidlservice-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.dpmservice@1.0",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.hardware.dpmservice@1.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.qccsyshal@1.0",
     owner: "nothing",
     strip: {
@@ -27205,113 +26679,6 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libbinder_ndk",
                 "android.hardware.common-V2-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.datachannelservice-V1-ndk",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.ims.datachannelservice-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.datachannelservice-V2-ndk",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.ims.datachannelservice-V2-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.imsrtpservice@3.0",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.imsrtpservice@3.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.imsrtpservice@3.1",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.imsrtpservice@3.1.so",
-            ],
-            shared_libs: [
-                "vendor.qti.imsrtpservice@3.0",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
                 "libc++",
                 "libc",
                 "libm",
@@ -27561,39 +26928,6 @@ android_app_import {
 }
 
 android_app_import {
-    name: "uimgbaservice",
-    owner: "nothing",
-    apk: "proprietary/product/app/uimgbaservice/uimgbaservice.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    product_specific: true,
-}
-
-android_app_import {
-    name: "uimremoteclient",
-    owner: "nothing",
-    apk: "proprietary/product/app/uimremoteclient/uimremoteclient.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    product_specific: true,
-}
-
-android_app_import {
-    name: "uimremoteserver",
-    owner: "nothing",
-    apk: "proprietary/product/app/uimremoteserver/uimremoteserver.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    product_specific: true,
-}
-
-android_app_import {
     name: "AppDirectedSMSService",
     owner: "nothing",
     apk: "proprietary/product/priv-app/AppDirectedSMSService/AppDirectedSMSService.apk",
@@ -27681,57 +27015,9 @@ android_app_import {
 }
 
 android_app_import {
-    name: "QtiTelephony",
-    owner: "nothing",
-    apk: "proprietary/system_ext/priv-app/QtiTelephony/QtiTelephony.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    privileged: true,
-    system_ext_specific: true,
-}
-
-android_app_import {
     name: "WfdService",
     owner: "nothing",
     apk: "proprietary/system_ext/priv-app/WfdService/WfdService.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    privileged: true,
-    system_ext_specific: true,
-}
-
-android_app_import {
-    name: "dpmserviceapp",
-    owner: "nothing",
-    apk: "proprietary/system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    privileged: true,
-    system_ext_specific: true,
-}
-
-android_app_import {
-    name: "ims",
-    owner: "nothing",
-    apk: "proprietary/system_ext/priv-app/ims/ims.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    privileged: true,
-    system_ext_specific: true,
-}
-
-android_app_import {
-    name: "qcrilmsgtunnel",
-    owner: "nothing",
-    apk: "proprietary/system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk",
     certificate: "platform",
     dex_preopt: {
         enabled: false,
@@ -27757,253 +27043,10 @@ dex_import {
 }
 
 dex_import {
-    name: "uimgbalibrary",
-    owner: "nothing",
-    jars: [
-        "proprietary/product/framework/uimgbalibrary.jar",
-    ],
-    product_specific: true,
-}
-
-dex_import {
-    name: "uimgbamanagerlibrary",
-    owner: "nothing",
-    jars: [
-        "proprietary/product/framework/uimgbamanagerlibrary.jar",
-    ],
-    product_specific: true,
-}
-
-dex_import {
-    name: "uimremoteclientlibrary",
-    owner: "nothing",
-    jars: [
-        "proprietary/product/framework/uimremoteclientlibrary.jar",
-    ],
-    product_specific: true,
-}
-
-dex_import {
-    name: "uimremoteserverlibrary",
-    owner: "nothing",
-    jars: [
-        "proprietary/product/framework/uimremoteserverlibrary.jar",
-    ],
-    product_specific: true,
-}
-
-dex_import {
-    name: "uimservicelibrary",
-    owner: "nothing",
-    jars: [
-        "proprietary/product/framework/uimservicelibrary.jar",
-    ],
-    product_specific: true,
-}
-
-dex_import {
     name: "com.android.hotwordenrollment.common.util_WIDEBAND",
     owner: "nothing",
     jars: [
         "proprietary/system_ext/framework/com.android.hotwordenrollment.common.util_WIDEBAND.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "com.qti.dpmframework",
-    owner: "nothing",
-    jars: [
-        "proprietary/system_ext/framework/com.qti.dpmframework.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "dpmapi",
-    owner: "nothing",
-    jars: [
-        "proprietary/system_ext/framework/dpmapi.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "qcrilhook",
-    owner: "nothing",
-    jars: [
-        "proprietary/system_ext/framework/qcrilhook.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.connection-V1.0-java",
-    owner: "nothing",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.connectionaidlservice-V1-java",
-    owner: "nothing",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.connectionaidlservice-V1-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.datachannelservice-V1-java",
-    owner: "nothing",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.datachannelservice-V1-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.datachannelservice-V2-java",
-    owner: "nothing",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.datachannelservice-V2-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.factory-V2.0-java",
-    owner: "nothing",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.factory-V2.1-java",
-    owner: "nothing",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.factory-V2.1-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.factory-V2.2-java",
-    owner: "nothing",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.factory-V2.2-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.factoryaidlservice-V1-java",
-    owner: "nothing",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.factoryaidlservice-V1-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.imscmaidlservice-V1-java",
-    owner: "nothing",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.imscmaidlservice-V1-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.rcssip-V1.0-java",
-    owner: "nothing",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.rcssip-V1.0-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.rcssip-V1.1-java",
-    owner: "nothing",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.rcssip-V1.1-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.rcssip-V1.2-java",
-    owner: "nothing",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.rcssip-V1.2-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.rcssipaidlservice-V1-java",
-    owner: "nothing",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.rcssipaidlservice-V1-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.rcsuce-V1.0-java",
-    owner: "nothing",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.rcsuce-V1.0-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.rcsuce-V1.1-java",
-    owner: "nothing",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.rcsuce-V1.1-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.rcsuce-V1.2-java",
-    owner: "nothing",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.rcsuce-V1.2-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.rcsuceaidlservice-V1-java",
-    owner: "nothing",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.rcsuceaidlservice-V1-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.ims.uceaidlservice-V1-java",
-    owner: "nothing",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.ims.uceaidlservice-V1-java.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.imsdatachannel",
-    owner: "nothing",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.imsdatachannel.jar",
     ],
     system_ext_specific: true,
 }
@@ -28647,9 +27690,9 @@ cc_prebuilt_binary {
                 "libhidlbase",
                 "libbinder_ndk",
                 "libandroid_net",
-                "vendor.qti.latencyaidlservice-V1-ndk",
-                "vendor.qti.data.factoryservice-V1-ndk",
-                "vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk",
+                "vendor.qti.latencyaidlservice-V1-ndk_vendor",
+                "vendor.qti.data.factoryservice-V1-ndk_vendor",
+                "vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -29757,7 +28800,7 @@ cc_prebuilt_binary {
                 "libutils",
                 "lib-imscommon",
                 "libbinder_ndk",
-                "vendor.qti.ims.factoryaidlservice-V1-ndk",
+                "vendor.qti.ims.factoryaidlservice-V1-ndk_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -31287,37 +30330,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "dpmd",
-    owner: "nothing",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/bin/dpmd",
-            ],
-            shared_libs: [
-                "libdpmframework",
-                "libdiag_system",
-                "libhardware_legacy",
-                "libhidlbase",
-                "libcutils",
-                "libutils",
-                "com.qualcomm.qti.dpm.api@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_binary {
     name: "qccsyshal@1.2-service",
     owner: "nothing",
     target: {
@@ -31386,41 +30398,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "tcmd",
-    owner: "nothing",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/bin/tcmd",
-            ],
-            shared_libs: [
-                "libbinder",
-                "libbinder_ndk",
-                "libcutils",
-                "libutils",
-                "libhidlbase",
-                "libhardware",
-                "libhardware_legacy",
-                "liblog",
-                "vendor.qti.hardware.dpmservice@1.0",
-                "vendor.qti.hardware.dpmaidlservice-V1-ndk",
-                "libavservices_minijail",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_binary {
     name: "wfdservice64",
     owner: "nothing",
     target: {
@@ -31452,20 +30429,6 @@ cc_prebuilt_binary {
     },
     prefer: true,
     system_ext_specific: true,
-}
-
-install_symlink {
-    name: "system_ext_priv-app_ims_lib_arm64_libSurfaceUtil_jni_so",
-    system_ext_specific: true,
-    installed_location: "priv-app/ims/lib/arm64/libSurfaceUtil_jni.so",
-    symlink_target: "/system_ext/lib64/libSurfaceUtil_jni.so",
-}
-
-install_symlink {
-    name: "system_ext_priv-app_ims_lib_arm64_libimsmedia_jni_so",
-    system_ext_specific: true,
-    installed_location: "priv-app/ims/lib/arm64/libimsmedia_jni.so",
-    symlink_target: "/system_ext/lib64/libimsmedia_jni.so",
 }
 
 install_symlink {
