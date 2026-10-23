@@ -244,7 +244,6 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/asteroids/proprietary/vendor/etc/hal_uuid_map_JPN.xml:$(TARGET_COPY_OUT_VENDOR)/etc/hal_uuid_map_JPN.xml \
     vendor/nothing/asteroids/proprietary/vendor/etc/hal_uuid_map_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/hal_uuid_map_config.xml \
     vendor/nothing/asteroids/proprietary/vendor/etc/init.qti.fm.sh:$(TARGET_COPY_OUT_VENDOR)/etc/init.qti.fm.sh \
-    vendor/nothing/asteroids/proprietary/vendor/etc/init/android.hardware.biometrics.face-service.noth.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.biometrics.face-service.noth.rc \
     vendor/nothing/asteroids/proprietary/vendor/etc/init/android.hardware.bluetooth@1.1-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.1-service-qti.rc \
     vendor/nothing/asteroids/proprietary/vendor/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc \
     vendor/nothing/asteroids/proprietary/vendor/etc/init/android.hardware.gatekeeper-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper-service-qti.rc \
@@ -991,7 +990,6 @@ PRODUCT_PACKAGES += \
     libbluetooth_audio_session_qti_2_1 \
     libbtnv \
     libcacertclient \
-    libcamera2ndk_vendor-v34 \
     libcamerapostproc \
     libcamxcommonutils \
     libcamxexternalformatutils \
@@ -1285,7 +1283,6 @@ PRODUCT_PACKAGES += \
     libspl \
     libssc_default_listener \
     libssd \
-    libstfaceunlockppl \
     libstreamparser \
     libstreamprocessor \
     libsubsystem_control \
@@ -1511,7 +1508,6 @@ PRODUCT_PACKAGES += \
     nt-telephony-interface \
     com.android.hotwordenrollment.common.util_WIDEBAND \
     ImsRtpService-aidl.xml \
-    android.hardware.biometrics.face-service.noth.xml \
     android.hardware.drm-service.xml \
     android.hardware.gnss-aidl-service-qti.xml \
     android.hardware.radio.config.xml \
@@ -1580,7 +1576,6 @@ PRODUCT_PACKAGES += \
     fm_qsoc_patches \
     hdcp1prov \
     hdcp2p2prov \
-    android.hardware.biometrics.face-service.noth \
     android.hardware.bluetooth@1.1-service-qti \
     android.hardware.gatekeeper-service-qti \
     android.hardware.gnss-aidl-service-qti \
