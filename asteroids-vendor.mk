@@ -1314,7 +1314,6 @@ PRODUCT_PACKAGES += \
     libvideoutils \
     libvidhance \
     libvmfilexfer \
-    libvmmem \
     libvui_dmgr \
     libvui_dmgr_client \
     libvui_intf \
