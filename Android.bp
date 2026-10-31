@@ -16191,7 +16191,7 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "liblog",
                 "libutils",
-                "vendor.qti.hardware.camera.postproc@1.0",
+                "vendor.qti.hardware.camera.postproc@1.0-nothing",
                 "libbase",
                 "libhidlbase",
                 "libbinder_ndk",
@@ -23526,6 +23526,34 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.camera.postproc@1.0-nothing",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-nothing.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.camera.postproc@1.0-service-impl",
     owner: "nothing",
     strip: {
@@ -23561,7 +23589,7 @@ cc_prebuilt_library_shared {
                 "vendor.qti.hardware.display.mapperextensions@1.1",
                 "android.hardware.graphics.allocator-V1-ndk",
                 "libjsoncpp",
-                "vendor.qti.hardware.camera.postproc@1.0",
+                "vendor.qti.hardware.camera.postproc@1.0-nothing",
                 "libz",
                 "libc",
                 "libm",
