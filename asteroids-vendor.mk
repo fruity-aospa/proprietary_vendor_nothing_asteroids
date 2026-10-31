@@ -237,6 +237,10 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/asteroids/proprietary/vendor/etc/display/qdcm_calib_data_rm69220_amoled_vid_mode_dsi_BOE_panel_with_DSC.json:$(TARGET_COPY_OUT_VENDOR)/etc/display/qdcm_calib_data_rm69220_amoled_vid_mode_dsi_BOE_panel_with_DSC.json \
     vendor/nothing/asteroids/proprietary/vendor/etc/display/qdcm_calib_data_rm69220_amoled_vid_mode_dsi_visionox_panel_with_DSC.json:$(TARGET_COPY_OUT_VENDOR)/etc/display/qdcm_calib_data_rm69220_amoled_vid_mode_dsi_visionox_panel_with_DSC.json \
     vendor/nothing/asteroids/proprietary/vendor/etc/display/thermallevel_to_fps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/thermallevel_to_fps.xml \
+    vendor/nothing/asteroids/proprietary/vendor/etc/displayconfig/display_id_4630946268659918978.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946268659918978.xml \
+    vendor/nothing/asteroids/proprietary/vendor/etc/displayconfig/display_id_4630946978939328130.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946978939328130.xml \
+    vendor/nothing/asteroids/proprietary/vendor/etc/displayconfig/display_id_4630947039571902850.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630947039571902850.xml \
+    vendor/nothing/asteroids/proprietary/vendor/etc/displayconfig/display_id_4630947039571902851.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630947039571902851.xml \
     vendor/nothing/asteroids/proprietary/vendor/etc/dpm_vndr/vendor.dpm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/dpm_vndr/vendor.dpm.conf \
     vendor/nothing/asteroids/proprietary/vendor/etc/felica/common.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/felica/common.cfg \
     vendor/nothing/asteroids/proprietary/vendor/etc/felica/mfm.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/felica/mfm.cfg \
