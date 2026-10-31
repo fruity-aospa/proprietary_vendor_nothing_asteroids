@@ -24,7 +24,7 @@ presilNodeRequestDoneTimeout=2000
 
 #sois param
 enableCameraSOISMask=0x1
-SOISOptimizationEnable=0x0
+SOISOptimizationEnable=FALSE
 SOISOTPDataSwap=TRUE
 SOISSensorSamplingRate=500
 SOISDataReportRate=500
@@ -73,6 +73,3 @@ overrideScaleLimit=2
 # enable motion vector
 enableMotionAssisted3A=1
 disableASDStatsProcessing=0
-
-# Disable FlashLight thermal Threshold (70000 = 70 Celsius)
-FlashLightThermalThreshold=70000
