@@ -35,6 +35,7 @@ ioctl: 1
 mremap: 1
 readlinkat: 1
 pread64: 1
+lseek: 1
 fstatfs: 1
 rt_sigprocmask: 1
 faccessat: 1
