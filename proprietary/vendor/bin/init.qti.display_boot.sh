@@ -245,11 +245,10 @@ case "$target" in
     ;;
     "neo61")
     case "$soc_hwid" in
-        554|739)
+        554)
             setprop vendor.display.enable_null_display 1
         ;;
-        579|740)
-            # SOC ID for Aliso is 740
+        579)
             setprop vendor.gralloc.use_dma_buf_heaps 1
             setprop vendor.display.enable_posted_start_dyn 2
             setprop vendor.display.enable_allow_idle_fallback 1
