@@ -37,3 +37,4 @@ start_msm_irqbalance()
                 start vendor.msm_irqbalance
          fi
 }
+start_msm_irqbalance
